@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app-common.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <!-- http://jade-lang.com/reference/mixins/-->
+  <body>
+    <div class="page-wrap">
+      <header class="header">
+        <div class="width-wrap justifyed">
+          <div class="header--logo">
+            <div class="header--logo-img"></div>
+            <!--span SYSTEM-->
+          </div><a href="#price" class="header--btn js--page-scroll">Пора навести порядок</a>
+          <div class="header--contacts"><a href="tel:88007074777" class="header--contacts-phone">8 800 707 47 77</a><a data-fancybox="modal-header" data-src="#call" href="javascript:;" class="header--contacts-call">Заказать звонок</a></div>
+        </div>
+      </header>
+      <div class="hidden-block">
+        <div id="form-ok" class="popup popup-text">
+          <h2>Спасибо!</h2>
+          <p class="fs18">Мы&nbsp;приняли ваше обращение! Обращений очень много, но&nbsp;мы&nbsp;берем не&nbsp;более 4х&nbsp;клиентов в&nbsp;месяц. Если вы&nbsp;хотите ускорить процесс построения системы в&nbsp;вашей компании, заполните опросную форму и&nbsp;мы&nbsp;свяжемся с&nbsp;вами намного быстрее!</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdO691uYBAZCITuSMcr37EMwV7EX4c4jjE9zmyvdZ9nN8WvNQ/viewform" target="_blank" class="btn">Заполнить опросную форму</a>
+        </div>
+        <div id="call" class="popup">
+          <form action="https://app.salesap.ru/web_forms/order" method="post" class="main-form">
+            <input type="hidden" name="source_id" value="69938">
+            <input type="hidden" name="redirect_url" value="http://system.dnk.bz/thank_you">
+            <input type="hidden" name="token" value="36d15a24fc1958b1ede8380f191cd6aa">
+            <input type="hidden" name="responsible_id" value="10134">
+            <h2>Заказать обратный звонок</h2>
+            <label class="label-input">
+              <input type="text" name="contact[first_name]" placeholder="Имя" class="inp required"><span class="error"></span>
+            </label>
+            <label class="label-input">
+              <input type="text" name="contact[mobile_phone]" placeholder="Телефон" class="inp required inp-phone"><span class="error"></span>
+            </label>
+            <button type="submit" class="btn js--form-submit">Отправить</button>
+          </form>
+        </div>
+        <div id="policy" class="popup popup-text policy">
+          <h3>Политика конфиденциальности</h3>
+          <p class="fs18">Данное соглашение об&nbsp;обработке персональных данных разработано в&nbsp;соответствии с&nbsp;законодательством Российской Федерации.</p>
+          <p class="fs18">Все лица заполнившие сведения, составляющие персональные данные на&nbsp;данном сайте, а&nbsp;также разместившие иную информацию обозначенными действиями подтверждают свое согласие на&nbsp;обработку персональных данных и&nbsp;их&nbsp;передачу оператору обработки персональных данных.</p>
+          <p class="fs18">Под персональными данными Гражданина понимается нижеуказанная информация: общая информация; посетители сайта направляют свои персональные данные.</p>
+          <p class="fs18">Гражданин, принимая настоящее Соглашение, выражают свою заинтересованность и&nbsp;полное согласие, что обработка их&nbsp;персональных данных может включать в&nbsp;себя следующие действия: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, уничтожение.</p>
+          <p class="fs18">Гражданин гарантирует: информация, им&nbsp;предоставленная, является полной, точной и&nbsp;достоверной; при предоставлении информации не&nbsp;нарушается действующее законодательство Российской Федерации, законные права и&nbsp;интересы третьих лиц; вся предоставленная информация заполнена Гражданина в&nbsp;отношении себя лично.</p>
+        </div>
+      </div>
+      <div id="loader-wrapper">
+        <div class="cssload-loader">
+          <div class="cssload-inner cssload-one"></div>
+          <div class="cssload-inner cssload-two"></div>
+          <div class="cssload-inner cssload-three"></div>
+        </div>
+      </div>
+      <section class="promo">
+        <div class="width-wrap">
+          <div class="promo-circle">
+            <div class="promo-circle-bg"></div>
+            <div class="content">
+              <h2>Внедрение <i><small class="blue">системной</small> командной</i> <i>работы</i>
+              </h2>
+              <p>Корпоративный тренинг <i>по&nbsp;построению дорожных карт</i> <i>и&nbsp;контроль их&nbsp;реализации</i>
+              </p>
+            </div>
+          </div>
+          <ul class="promo-list">
+            <li><span class="number">1</span>
+              <p class="fs18">Cотрудники<i>“не косячат”</i></p>
+            </li>
+            <li><span class="number">2</span>
+              <p class="fs18">Цели достигаются<i>быстрее в 2-4 раза</i></p>
+            </li>
+            <li><span class="number">3</span>
+              <p class="fs18">Собственник<i>контролирует всё</i></p>
+            </li>
+          </ul>
+          <h3>Управляйте своим бизнесом, опираясь на <i>контролируемые показатели, затрачивая не&nbsp;более <small class="blue">15&nbsp;минут в&nbsp;день.</small></i>
+          </h3>
+        </div>
+      </section>
+      <section class="chaos">
+        <div class="chaos-bg"></div>
+        <div class="width-wrap">
+          <div class="content">
+            <p>Если вы&nbsp;серьезно подходите к&nbsp;проблеме низкой эффективности вашей команды придется потратить время и&nbsp;внимательно прочитать информацию на&nbsp;нашем сайте.</p>
+            <h2>Хаос&nbsp;&mdash; это болезнь вашей компании. Болезнь надо признать, а&nbsp;к&nbsp;её&nbsp;лечению необходимо подходить <small class="blue">основательно.</small>
+            </h2>
+          </div>
+          <div class="chaos-percent justifyed">
+            <h2>Проблемы,  <i>которые</i>
+            </h2>
+            <div class="chaos-percent-img">
+              <div class="img"></div>
+            </div>
+            <h2>компаний   <small class="blue">никогда</small> <i>не&nbsp;решат! "</i>
+            </h2>
+          </div>
+          <div class="chaos-list justifyed">
+            <li class="fs18">Сотрудники не&nbsp;понимают, какие задачи перед ними стоят</li>
+            <li class="fs18">Есть идеи, как выйти на&nbsp;новый уровень, но&nbsp;нет реализации</li>
+            <li class="fs18">Задачи выполняются хаотично, без единой системы контроля</li>
+            <li class="fs18">Команда контролирует руководство, а&nbsp;не&nbsp;наоборот</li>
+            <li class="fs18">Нет пошагового прописанного плана по&nbsp;достижению целей</li>
+            <li class="fs18">Руководитель&nbsp;80% времени занимается мелкой текучкой</li>
+            <li class="fs18">Без постоянного контроля руководителя, показатели ухудшаются</li>
+            <li class="fs18">Исполнители &laquo;косячат&raquo; и&nbsp;закидывают руководителя отмазками</li>
+            <li class="fs18">Каждый раз приходится по&nbsp;10&nbsp;раз объяснять одну и&nbsp;ту&nbsp;же задачу</li>
+          </div>
+        </div>
+      </section>
+      <section class="expert">
+        <div class="expert-bg"></div>
+        <div class="width-wrap">
+          <div class="expert-arrow">
+            <div class="img"></div>
+          </div>
+          <h2>Мы&nbsp;знаем, как избавиться от&nbsp;этих проблем <i class="blue">раз и&nbsp;навсегда!</i>
+          </h2>
+          <p class="text-center">Потому что мы&nbsp;делали это уже сотни раз!</p>
+          <ul class="expert-list">
+            <li class="expert-list--el"><a data-fancybox="" href="https://www.youtube.com/watch?v=EcqI4gvRl9s&amp;amp;autoplay=1&amp;amp;rel=0&amp;amp;controls=0&amp;amp;showinfo=0" class="michail">
+                <div class="img"></div></a>
+              <div class="content"><span class="name">Михаил Колмаков</span>
+                <ul>
+                  <li class="fs18">Построил и&nbsp;внедрил более 150 дорожных карт</li>
+                  <li class="fs18">Модератор программы &laquo;Бизнес Завод&raquo; ШБ&nbsp;Синергия</li>
+                  <li class="fs18">Спикер програмы &laquo;Миллиард за&nbsp;миллион&raquo;</li>
+                  <li class="fs18">Со-основатель проекта &laquo;Несистемная системность&raquo;</li>
+                  <li class="fs18">Со-основатель маркетингового агенства DNK Club</li>
+                  <li class="fs18">Со-основатель IT-проекта EvoDesk</li>
+                </ul>
+              </div>
+            </li>
+            <li class="expert-list--el"><a data-fancybox="" href="https://www.youtube.com/watch?v=-_SlpKR8QJQ&amp;amp;autoplay=1&amp;amp;rel=0&amp;amp;controls=0&amp;amp;showinfo=0" class="ilia">
+                <div class="img"></div></a>
+              <div class="content"><span class="name">Илья Алябушев</span>
+                <ul>
+                  <li class="fs18">Основатель компании Практика Системного Бизнеса</li>
+                  <li class="fs18">Адаптировал мировую практику гибкого управления сотрудниками под реалии компаний&nbsp;РФ и&nbsp;СНГ.</li>
+                  <li class="fs18">Внедрил системную работу сотрудников по&nbsp;Agile в&nbsp;100 командах 22&nbsp;года проектного опыта, 8&nbsp;лет опыта внедрений</li>
+                  <li class="fs18">Следует миссии&nbsp;&mdash; привести страну к&nbsp;экономическую чуду за&nbsp;счёт изменения культуры управления</li>
+                </ul>
+              </div>
+            </li>
+            <li class="expert-list--el"><a data-fancybox="" href="https://www.youtube.com/watch?v=j0RV6oP8W98&amp;amp;autoplay=1&amp;amp;rel=0&amp;amp;controls=0&amp;amp;showinfo=0" class="igor">
+                <div class="img"></div></a>
+              <div class="content"><span class="name">Игорь Масленников</span>
+                <ul>
+                  <li class="fs18">Собственник интернет-магазина AgmaShop (оборот &gt;200&nbsp;млн. руб.)</li>
+                  <li class="fs18">Спикер программы &laquo;Бизнес Завод&raquo; ШБ&nbsp;Синергия</li>
+                  <li class="fs18">Спикер програмы &laquo;Миллиард за&nbsp;миллион&raquo;</li>
+                  <li class="fs18">Со-основатель проекта &laquo;Несистемная системность&raquo;</li>
+                  <li class="fs18">Со-основатель маркетингового агенства DNK Club</li>
+                  <li class="fs18">Со-основатель IT-проекта EvoDesk</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="expert-text justifyed">
+            <div class="expert-text-number"></div>
+            <div class="content">
+              <h3><small class="blue">успешных</small>  внедрений систем проектного  <i>управления в&nbsp;организации различного</i> <i>масштаба</i>
+              </h3><span>от&nbsp;5&nbsp;до&nbsp;1500 сотрудников</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="form">
+        <div class="form-bg"></div>
+        <div class="width-wrap">
+          <div class="form-wire"></div>
+          <h2>Не&nbsp;можете терпеть хаос и&nbsp;беспорядок?<br><br><i><small class="blue">Заполняйте форму,</small>  мы проведем бесплатное  </i><i>собеседование с&nbsp;вами и&nbsp;расскажем, как мы</i> <i>можем помочь</i>
+          </h2>
+          <form action="https://app.salesap.ru/web_forms/order" method="post" class="main-form">
+            <input type="hidden" name="source_id" value="69904">
+            <input type="hidden" name="redirect_url" value="http://system.dnk.bz/thank_you">
+            <input type="hidden" name="token" value="36d15a24fc1958b1ede8380f191cd6aa">
+            <input type="hidden" name="responsible_id" value="10134">
+            <div class="main-form--section">
+              <h4>Годовой оборот вашей компании</h4>
+              <div class="justifyed">
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24915]" value="до 100 млн. руб."><span>до 100 млн. руб.</span>
+                </label>
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24915]" value="от 100 до 800 млн. руб."><span>от 100 до 800 млн. руб.</span>
+                </label>
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24915]" value="от 800 млн. руб."><span>от 800 млн. руб.</span>
+                </label>
+              </div>
+              <h4>Количество менеджеров и&nbsp;руководителей направлений</h4>
+              <div class="justifyed">
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24917]" value="до 10 человек"><span>до 10 человек</span>
+                </label>
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24917]" value="от 10 до 30 человек"><span>от 10 до 30 человек</span>
+                </label>
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24917]" value="от 30 человек"><span>от 30 человек</span>
+                </label>
+              </div>
+              <div class="justifyed">
+                <label class="label-radio">
+                  <input type="radio" name="deal[custom_24916]" value="Я - собственник">
+                  <div class="psevdoradio"></div><span>Я - собственник</span>
+                </label>
+                <label class="label-radio">
+                  <input type="radio" name="deal[custom_24916]" value="Я - топ-менеджер">
+                  <div class="psevdoradio"></div><span>Я - топ-менеджер</span>
+                </label>
+                <label class="label-radio">
+                  <input type="radio" name="deal[custom_24916]" value="Я - исполнитель">
+                  <div class="psevdoradio"></div><span>Я - исполнитель</span>
+                </label>
+              </div>
+              <div class="decor-shadow"></div>
+              <h4>Введите Ваши контактные данные:</h4>
+              <div class="justifyed inputs">
+                <label class="label-input">
+                  <input type="text" name="contact[first_name]" placeholder="Имя" class="inp required"><span class="error"></span>
+                </label>
+                <label class="label-input">
+                  <input type="text" name="contact[mobile_phone]" placeholder="Телефон" class="inp required inp-phone"><span class="error"></span>
+                </label>
+                <label class="label-input">
+                  <input type="text" name="contact[email]" placeholder="E-mail" class="inp required inp-mail"><span class="error"></span>
+                </label>
+                <label class="label-input">
+                  <input type="text" name="contact[work_city]" placeholder="Город" class="inp required"><span class="error"></span>
+                </label>
+              </div>
+              <button type="submit" class="btn js--form-submit">Получить аудит от DNK Системы</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="podium">
+        <div class="width-wrap">
+          <div class="justifyed podium-percent">
+            <h2>За счет чего строится  <i><small class="blue">система</small>  в компании?</i>
+            </h2>
+            <div class="podium-percent-img">
+              <div class="img"></div>
+            </div>
+            <h2>столпа  внедрения  <i>системной  работы</i>
+            </h2>
+          </div>
+          <div class="podium-list justifyed">
+            <li class="fs18">Постановка амбициозной и&nbsp;измеримой цели, которая мотивирует всю команду</li>
+            <li class="fs18">Составление дорожной карты по&nbsp;достижению этой цели по&nbsp;действиям, ответственным и&nbsp;дедлайнам</li>
+            <li class="fs18">Ежедневный контроль команды на&nbsp;протяжении 2х&nbsp;месяцев для внедрения системной работы</li>
+          </div>
+          <h2>Мы&nbsp;будем проводить совещания с&nbsp;вашей командой <i><small class="blue">каждый день</small>  до тех пор, пока  <small class="blue">системная работа </small></i> <i>не&nbsp;войдет в&nbsp; <small class="blue">привычку</small></i>
+          </h2>
+        </div>
+      </section>
+      <section class="steps">
+        <div class="width-wrap">
+          <h2>Этапы внедрения <i>системной командной работы</i>
+          </h2>
+          <ul class="steps-list">
+            <div class="steps-list--el">
+              <div class="number"><span>I<i>этап</i></span></div>
+              <div class="content"><span class="fbook">Подготовительный. Опрос клиента</span><span class="fs16 fbook">До&nbsp;начала практического тренинга команда должна заполнить опросную форму</span><span class="fs12 fmedium">Задачи этапа:</span>
+                <ul>
+                  <li>Провести онлайн опрос ожиданий и&nbsp;потребностей в&nbsp;системности и&nbsp;планировании для участников стратегической сессии</li>
+                  <li>Скорректировать программу сессии и&nbsp;внедрения под реальные запросы и&nbsp;текущие возможности команд</li>
+                </ul><a href="https://docs.google.com/forms/d/e/1FAIpQLSdO691uYBAZCITuSMcr37EMwV7EX4c4jjE9zmyvdZ9nN8WvNQ/viewform" target="_blank" class="link">Заполнить опросную форму подготовительного этапа</a>
+              </div>
+            </div>
+            <div class="steps-list--el">
+              <div class="number"><span>II<i>этап</i></span></div>
+              <div class="content"><span class="fbook">Проведение сессии с&nbsp;экспертами
+                  <div class="icon"></div><i>2 дня</i></span>
+                <p class="fs16 fbook">В&nbsp;сессии принимают участие собственник, руководители направлений, их&nbsp;прямые подчиненные и&nbsp;сотрудники по&nbsp;результатам заполнения анкет. Для одного направления проектная группа не&nbsp;более 5&nbsp;человек.</p><span class="fs14 fmedium">ДЕНЬ ПЕРВЫЙ. Идея системности и&nbsp;формирования цели.</span>
+                <p class="fs16 fbook"> В&nbsp;первый день команда освоит базовые знания о&nbsp;практике системной работы и&nbsp;сформулирует общую мотивирующую цель с&nbsp;измеримыми показателями.</p>
+                <div class="hidden-content">
+                  <p class="fs16 fbook">Задачи дня</p>
+                  <ul>
+                    <li>Продать идею системной работы участникам, объяснить зачем мы&nbsp;здесь находимся и&nbsp;что именно будем делать на&nbsp;сессии и&nbsp;после, чтобы вовлечь всех участников в&nbsp;работу.</li>
+                    <li>Продемонстрировать лидерам направлений методологию и&nbsp;преимущества системной работы и&nbsp;проектного управления.</li>
+                    <li>Показать на&nbsp;практике принцип подготовки и&nbsp;реализации проекта на&nbsp;примере карты целей и&nbsp;системой работы.&nbsp;4. Заполнить вместе с&nbsp;командами блок Карты целей для подготовки к&nbsp;выгрузке идей и&nbsp;возможностей.</li>
+                    <li>Заполнить Блок Продукт компании наполнить гипотезами и&nbsp;решениями.</li>
+                    <li>Заполнить Блок Продукт компании наполнить гипотезами и&nbsp;решениями.</li>
+                    <li>Заполнить Блок Продукт компании наполнить гипотезами и&nbsp;решениями.</li>
+                    <li>Заполнить Блок Принцивы и&nbsp;ценности команды</li>
+                    <li>Упаковать картину ожидаемого будущего на&nbsp;2018&nbsp;год.</li>
+                    <li>Сформулировать мотивирующие достижимые цели компаний с&nbsp;показателями.</li>
+                  </ul>
+                </div><a class="more fs16 fbook mb35 js--shos-more">Подробнее</a><span class="fs14 fmedium">ДЕНЬ второй. Постановка задач и&nbsp;дорожная карта.</span>
+                <p class="fs16 fbook"> Во&nbsp;второй день команда получит техники постановки задач и&nbsp;гопотез, руководители освоят формулу делегирования. Для каждого направления участники команды составят дорожную карту и&nbsp;перенесут задачи в&nbsp;IT сервис для командного управления.</p>
+                <div class="hidden-content">
+                  <p class="fs16 fbook">Задачи дня</p>
+                  <ul>
+                    <li>Теория методология составления дорожных карт</li>
+                    <li>Практика составления дорожных карт</li>
+                    <li>Показать принципы ритма системной работы для гарантированного достижения цели компании.</li>
+                    <li>Показать на&nbsp;практике принцип формулировки правильной задачи по&nbsp;формуле делегирования</li>
+                    <li>Показать технику формирования и&nbsp;утверждение гипотезы у&nbsp;команды</li>
+                    <li>Сформировать набор измеримых гипотез по&nbsp;достижению цели по&nbsp;каждому направлению</li>
+                    <li>Практика формирования дорожных карт для утвежденных гипотез и&nbsp;сформулированных задач</li>
+                    <li>Разложить дорожную карту по&nbsp;действиям, отвественным, ожидаемым результат и&nbsp;срокам выполнения</li>
+                    <li>Практика системной работы совещания, бриффинги, ретроспективы</li>
+                  </ul>
+                </div><a class="more fs16 fbook mb35 js--shos-more">Подробнее</a><span class="fs14 fmedium">ДЕНЬ третий. Индивидуальная корректировка дорожных карт.</span>
+                <p class="fs16 fbook"> Третий день необходим, в&nbsp;случае, когда собственнику необходима более детальная проработка модераторами каждого отдельного шага до&nbsp;достижения цели и&nbsp;корректировка составленной дорожной карты.</p>
+                <div class="hidden-content">
+                  <p class="fs16 fbook">Задачи дня</p>
+                  <ul>
+                    <li>Дать обратную связь на&nbsp;сформулированные карты для каждой команды от&nbsp;экспертов и&nbsp;Координаторов.</li>
+                    <li>Подготовить вехи достижения цели с&nbsp;каждой командой.</li>
+                    <li>Выписать проекты с&nbsp;конкретными действиями с&nbsp;каждой командой.</li>
+                    <li>Разложить каждую отдельную гипотезу всех направлений по&nbsp;пошаговым действиям с&nbsp;распределением ответственных, дедлайнов и&nbsp;ожидаемых результатов от&nbsp;выполнения задачи.</li>
+                    <li>                             Стартовать ритм системной работы для выполнения проектов и&nbsp;достижения цели с&nbsp;каждой командой.</li>
+                  </ul>
+                </div><a class="more fs16 fbook mb35 js--shos-more">Подробнее</a><br><a href="" target="_blank" class="link">Скачать пример дорожной карты компании</a>
+              </div>
+            </div>
+            <div class="steps-list--el">
+              <div class="number"><span>III<i>этап</i></span></div>
+              <div class="content"><span class="fbook">Внедрение с&nbsp;координатором
+                  <div class="icon"></div><i>2 месяца</i></span>
+                <p class="fs16 fbook">Системная работа формируется только благодаря привычке и&nbsp;ежедневному повторению действий по&nbsp;планированию, оценке эффективности и&nbsp;корректировки направлений. Именно поэтому мы&nbsp;внедряем наших координатов в&nbsp;каждую из&nbsp;команд для создания ритма эффективной проектной работы.</p>
+                <p class="fs16 fbook">Координатор эксперт команды &laquo;ДНК Системы&raquo;, который ежедневно помогает командам оставаться в&nbsp;ритме системной работы для формирования привычки</p>
+                <div class="hidden-content">
+                  <p class="fs16 fbook">Задачи дня</p>
+                  <ul>
+                    <li>Обеспечить ритм ежедневной поддежки</li>
+                    <li>Сформировть у&nbsp;команды навык фокусировки на&nbsp;поставленных задачах</li>
+                    <li>Сформировать у&nbsp;команды навык расставления приоритетов и&nbsp;ответственных</li>
+                  </ul>
+                  <p class="fs16 fbook">Конкретные действия на этапе</p>
+                  <ul>
+                    <li>Ежедневная 15&nbsp;минутный бриффинг с&nbsp;участниками команды</li>
+                    <li>Еженедельное совместное планирование задач по&nbsp;проектам с&nbsp;командой сотрудников 1,5 часа</li>
+                    <li>Контроль качества внедрения с&nbsp;обратной связью для руководителя</li>
+                    <li>Контроль реализации ключевых проектов развития с&nbsp;экспертной оценкой и&nbsp;рекомендациями</li>
+                    <li>Составление отчетной документации для собственника о&nbsp;ходе реализации поставленных задач с&nbsp;отчетом об&nbsp;эффективности сотрудников</li>
+                  </ul>
+                </div><a class="more fs16 fbook mb35 js--shos-more">Подробнее</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </section>
+      <section class="result">
+        <div class="result-bg"></div>
+        <div class="width-wrap">
+          <h2>Что Вы получите  <small class="blue">в&nbsp;результате </small> <i>после внедрения наших отработанных</i> <i> технологий?</i>
+          </h2>
+          <div class="result-img">
+            <div class="img"></div>
+          </div>
+          <div class="result-title"></div>
+          <h2>по&nbsp;реализации своих проектов точно и&nbsp;в&nbsp;срок!</h2>
+          <ul class="result-list justifyed">
+            <li class="fs18">По&nbsp;всем направлениям сформулированы точные измеряемые цели</li>
+            <li class="fs18">Электронную систему контроля сотрудников и&nbsp;их&nbsp;эффективности</li>
+            <li class="fs18">У&nbsp;каждой задачи есть отвественный, статус и&nbsp;срок</li>
+            <li class="fs18">Снижение затрат на&nbsp;выполнение отдельного проекта</li>
+            <li class="fs18">Возможность корректировать работу, не&nbsp;причиняя вреда</li>
+            <li class="fs18">Ритм ежедневной эффективной системной работы</li>
+          </ul>
+          <h2>Сотрудники сами находят <i>решение проблемы и&nbsp;доводят работу</i> <i class="blue">до&nbsp;результата</i>
+          </h2>
+        </div>
+      </section>
+      <section class="reason">
+        <div class="reason-bg"></div>
+        <div class="width-wrap">
+          <h3><small class="blue">Причины, </small>  по которым чаще всего наведение <i>порядка в компании откладывают "<small class="blue">на&nbsp;потом</small>&quot;</i>
+          </h3>
+          <ul class="reason-table">
+            <li>
+              <p class="fs18">У&nbsp;меня нет времени наводить порядок...</p>
+              <p class="fs18">А&nbsp;откуда оно появится, если в&nbsp;компании бардак и&nbsp;всю работу приходится делать самому?</p>
+            </li>
+            <li>
+              <p class="fs18">Сейчас немного раскидаюсь и&nbsp;обращусь...</p>
+              <p class="fs18">К&nbsp;сожалению, вероятность того, что вы&nbsp;&laquo;немного раскидаетесь&raquo; крайне мала. Чаще всего рутина засасывает все глубже и&nbsp;не&nbsp;отпускает.</p>
+            </li>
+            <li>
+              <p class="fs18">Они дебилы и&nbsp;нормально работать не&nbsp;будут</p>
+              <p class="fs18">Вам придется выбрать: либо вы&nbsp;остаетесь на&nbsp;текущей позиции и&nbsp;медлено скатываетесь вниз, либо делаете так, что &laquo;дебилы&raquo; начинают работать</p>
+            </li>
+            <li>
+              <p class="fs18">Я&nbsp;не&nbsp;верю, что этот бизнес можно поднять</p>
+              <p class="fs18">Если вы&nbsp;не&nbsp;горите желанием зарабатывать день и&nbsp;масштабировать свой бизнес, к&nbsp;сожалению мы&nbsp;ничем не&nbsp;можем помочь</p>
+            </li>
+            <li>
+              <p class="fs18">Мы&nbsp;уже внедряли задачник, и&nbsp;он&nbsp;не&nbsp;работает</p>
+              <p class="fs18">Ни&nbsp;один задачник не&nbsp;работает без методики управления и&nbsp;привычки</p>
+            </li>
+          </ul>
+          <div class="reason-percent justifyed">
+            <h2>Рутина  — <small class="blue">враг</small>,<i>который побеждает</i>
+            </h2>
+            <div class="reason-percent-img">
+              <div class="img"></div>
+            </div>
+            <h2>компаний  <i></i></h2>
+          </div>
+        </div>
+      </section>
+      <section class="recommendation">
+        <div class="width-wrap">
+          <h2>Советы от&nbsp;собственников, <i>которые <small class="blue">уже внедрили</small>  систему</i> <i>в&nbsp;своих компаниях!</i>
+          </h2><a href="" class="recommendation-video"><img src="img/img--poster-video.jpg" alt /></a>
+        </div>
+      </section>
+      <section class="free">
+        <div class="free-bg"></div>
+        <div class="width-wrap">
+          <form action="https://app.salesap.ru/web_forms/order" method="post" class="main-form">
+            <input type="hidden" name="source_id" value="69939">
+            <input type="hidden" name="redirect_url" value="http://system.dnk.bz/thank_you">
+            <input type="hidden" name="token" value="36d15a24fc1958b1ede8380f191cd6aa">
+            <input type="hidden" name="responsible_id" value="10134">
+            <h2>Бесплатный вебинар!</h2>
+            <p class="fbook">Хотите получить больше информации из&nbsp;первых уст?</p>
+            <p class="fbook">Посетите бесплатный вебинар от&nbsp;Михаила и&nbsp;Ильи и&nbsp;узнайте, в&nbsp;чем главный ключ к&nbsp;построению системы в&nbsp;своем бизнесе! <i>И&nbsp;получите шанс выиграть 100&nbsp;тыс. руб.&nbsp;на&nbsp;внедрение системной работы!</i>
+            </p><span class="form-notification fs16 fbook">Дата ближайшего вебинара: 22.02.2018 20.00 по Мск.</span>
+            <div class="inputs">
+              <label class="label-input">
+                <input type="text" name="contact[first_name]" placeholder="Имя" class="inp required"><span class="error"></span>
+              </label>
+              <label class="label-input">
+                <input type="text" name="contact[email]" placeholder="E-mail" class="inp required inp-mail"><span class="error"></span>
+              </label>
+            </div>
+            <button type="submit" class="btn js--form-submit">Записаться на вебинарs</button>
+          </form>
+        </div>
+      </section>
+      <section class="solution">
+        <div class="solution-bg"></div>
+        <div class="width-wrap">
+          <div class="solution-img"></div>
+          <h2>Как можно решить проблему  <i>построения системы  <small class="blue">без нас? </small></i>
+          </h2>
+          <div class="solution-list justifyed">
+            <li class="fs18">Нанять крутого исполнительного директора</li>
+            <li class="fs18">Отдать все отделы на&nbsp;аутсорс</li>
+            <li class="fs18">Нанять беременных ипотечниц</li>
+            <li class="fs18">Отдать&nbsp;50% бизнеса системному партнеру</li>
+            <li class="fs18">Пригласить хабардистов сектантов, мотиваторов</li>
+            <li class="fs18">Объявить себя банкротом или продать бизнесф</li>
+          </div>
+          <h2>Можно ли выйти на крупную прибыль  <small class="blue">без системности?</small> <br><br><i>Можно! </i> <i>Но только проливая кровь...</i>
+          </h2>
+        </div>
+      </section>
+      <section class="confidence">
+        <div class="width-wrap">
+          <div class="content">
+            <h2>Почему мы&nbsp;<small class="blue">так уверены,</small> <i>что у&nbsp;нас получится привести</i> <i>ваш хаос в&nbsp;полный порядок?</i>
+            </h2>
+            <ul class="confidence-img">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <ul class="confidence-list justifyed">
+            <li class="fs18">Мы&nbsp;знаем, как правильно сформулировать цель, чтобы ее&nbsp;приняла команда</li>
+            <li class="fs18">8&nbsp;лет практики внедрили SCRUM и&nbsp;AGILE более чем в&nbsp;150 компаниях</li>
+            <li class="fs18">Наша техника создания дорожных карт подходит для любого бизнеса</li>
+            <li class="fs18">Мы&nbsp;понимаем боли собственника и&nbsp;говорим с&nbsp;ним на&nbsp;одном языке</li>
+            <li class="fs18">Мы&nbsp;внедряет самые передовые технологии гибкого управления</li>
+            <li class="fs18">Доводим внедрение до&nbsp;привычки за&nbsp;счет ежедневной поддержки</li>
+          </ul>
+          <h2>Мы&nbsp;не&nbsp;ссоримся с&nbsp;сотрудниками, <i>мы&nbsp;обращаем их&nbsp;в&nbsp;свою &laquo;веру&raquo;</i> <i>для достижения <small class="blue">общих целей!</small></i>
+          </h2>
+        </div>
+      </section>
+      <section id="price" class="price">
+        <div class="price-bg"></div>
+        <div class="width-wrap">
+          <div class="price-arrows"></div>
+          <div class="content">
+            <h2>Стоимость программы и&nbsp;условия</h2>
+            <div class="decor-shadow"></div>
+            <div class="justifyed"><span class="fbook">Индивидуальный корпоративный тренинг:</span><span class="fmedium">1 000 000  руб.</span></div><span class="fs12 fmedium">В&nbsp;стоимость включено:</span>
+            <ul>
+              <li class="fs16">2&nbsp;дня интенсивной сессии (максимум 5&nbsp;наравлений)</li>
+              <li class="fs16">Детальная разработка дорожной карты одного направления</li>
+              <li class="fs16">2&nbsp;месяца ежедневного соопровождения координатором одного направления</li>
+            </ul>
+            <p class="fs16 fbook">На&nbsp;тренинге присутсвутют только представители вашей компании и&nbsp;вы&nbsp;можете быть максимально откровенными</p>
+            <div class="decor-shadow"></div>
+            <div class="justifyed"><span class="fbook">Групповой корпоративный тренинг:</span><span class="fmedium">300 000 руб.</span></div><span class="fs12 fmedium">В&nbsp;стоимость включено:</span>
+            <ul>
+              <li class="fs16">2&nbsp;дня интенсивной сессии (максимум 3&nbsp;представителя для одного направления)</li>
+            </ul>
+            <div class="decor-shadow"></div>
+            <div class="justifyed"><span class="fbook">Дополнительные услуги</span></div>
+            <div class="justifyed"><span class="fmedium fs12">Детальная разработка дорожной карты для одного направления</span><span class="fmedium">150 000 руб.</span></div>
+            <div class="justifyed"><span class="fmedium fs12">Месяц сопровождения координатором</span><span class="fmedium">75 000 руб.</span></div>
+          </div>
+        </div>
+      </section>
+      <section id="form" class="form form-footer">
+        <div class="form-bg"></div>
+        <div class="width-wrap">
+          <h2>Твердо решили избавиться от&nbsp;хаоса и <i>навести порядок?</i><br><i><small class="blue">Заполняйте форму,</small>  и ваш бизнес </i> <i>станет управляемым, сотрудники инициативными,</i> <i>а&nbsp;цели будут достигнуты!</i><i class="small fs18 fbook">* Если вы в другом городе ­ мы проводим выездные мероприятия</i>
+          </h2>
+          <form action="https://app.salesap.ru/web_forms/order" method="post" class="main-form">
+            <input type="hidden" name="source_id" value="69937">
+            <input type="hidden" name="redirect_url" value="http://system.dnk.bz/thank_you">
+            <input type="hidden" name="token" value="36d15a24fc1958b1ede8380f191cd6aa">
+            <input type="hidden" name="responsible_id" value="10134">
+            <div class="main-form--section">
+              <h4>Годовой оборот вашей компании</h4>
+              <div class="justifyed">
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24915]" value="до 100 млн. руб."><span>до 100 млн. руб.</span>
+                </label>
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24915]" value="от 100 до 800 млн. руб."><span>от 100 до 800 млн. руб.</span>
+                </label>
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24915]" value="от 800 млн. руб."><span>от 800 млн. руб.</span>
+                </label>
+              </div>
+              <h4>Количество менеджеров и&nbsp;руководителей направлений</h4>
+              <div class="justifyed">
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24917]" value="до 10 человек"><span>до 10 человек</span>
+                </label>
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24917]" value="от 10 до 30 человек"><span>от 10 до 30 человек</span>
+                </label>
+                <label class="label-radio-text">
+                  <input type="radio" name="deal[custom_24917]" value="от 30 человек"><span>от 30 человек</span>
+                </label>
+              </div>
+              <div class="justifyed">
+                <label class="label-radio">
+                  <input type="radio" name="deal[custom_24916]" value="Я - собственник">
+                  <div class="psevdoradio"></div><span>Я - собственник</span>
+                </label>
+                <label class="label-radio">
+                  <input type="radio" name="deal[custom_24916]" value="Я - топ-менеджер">
+                  <div class="psevdoradio"></div><span>Я - топ-менеджер</span>
+                </label>
+                <label class="label-radio">
+                  <input type="radio" name="deal[custom_24916]" value="Я - исполнитель">
+                  <div class="psevdoradio"></div><span>Я - исполнитель</span>
+                </label>
+              </div>
+              <h4>Какой формат программы вас интереует?</h4>
+              <div class="justifyed">
+                <label class="label-radio-text one-half">
+                  <input type="radio" name="deal[custom_24918]" value="Индивидуальный - 1 млн.руб."><span>Индивидуальный - 1 млн.руб.</span>
+                </label>
+                <label class="label-radio-text one-half">
+                  <input type="radio" name="deal[custom_24918]" value="Групповой - 0,3 млн.руб."><span>Групповой - 0,3 млн.руб.</span>
+                </label>
+              </div>
+              <div class="decor-shadow"></div>
+              <h4>Введите Ваши контактные данные:</h4>
+              <div class="justifyed inputs">
+                <label class="label-input">
+                  <input type="text" name="contact[first_name]" placeholder="Имя" class="inp required"><span class="error"></span>
+                </label>
+                <label class="label-input">
+                  <input type="text" name="contact[mobile_phone]" placeholder="Телефон" class="inp required inp-phone"><span class="error"></span>
+                </label>
+                <label class="label-input">
+                  <input type="text" name="contact[email]" placeholder="E-mail" class="inp required inp-mail"><span class="error"></span>
+                </label>
+                <label class="label-input">
+                  <input type="text" name="contact[work_city]" placeholder="Город" class="inp required"><span class="error"></span>
+                </label>
+              </div>
+              <button type="submit" class="btn js--form-submit">Получить аудит от DNK Системы</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="width-wrap justifyed"><a href="mailto:system@dnk.bz" class="footer-mail fs16 fbook">system@dnk.bz</a><a data-fancybox="modal-policy" data-src="#policy" href="javascript:;" class="fs16 fbook">Политика конфиденциальности</a><span class="fs16 fbook">Разработано club.dnk.bz</span></div>
+      </footer>
+    </div>
+  </body>
+</html>
