@@ -1,0 +1,76 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+ATOM_other
+.DS_Store
+.AppleDouble
+.LSOverride
+sublime-workspaces/**
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+**.DS_Store**
+**Thumbs.db**
+**.editorconfig**
+**.ftppass**
+**.grunt**
+
+# remove node_modules
+**/node_modules/**
+
+# remove FROZEN PARTS
+ATOM_other/
+
+**/FROZEN/**
+**/ATOM_other/**
+
+# remove modules.scss (commit conflict)
+**/sass/modules.scss
+
+# webstorm workspace conflicts
+**/.idea/**
+.idea/workspace.xml
+.idea/jsLibraryMappings.xml
+
+# local_backup
+**/local_backup/**
+
+# bower_componenets(for css regressions/testing)
+**/bower_components/**

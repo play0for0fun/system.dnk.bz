@@ -3,6 +3,8 @@
  * @version v0.1.0
  * @author bev-olga@yandex.ru
  */
+var lots_of_stuff_already_done = false;
+
 $(document).ready(function () {
     var BODY = $('body');
     var WINDOW = $(window);
@@ -104,41 +106,74 @@ $(document).ready(function () {
         }
     }
 
-    // Отправка почты
-    $('.js--form-submit').on('click', function () {
-        var form = $(this).closest('form');
-        var url = form.attr('action');
-        var method = form.attr('method');
-        var btn = $(this);
-        var text = btn.text();
-        btn.text('Отправляем');
+    
+    $('form').submit(function(e){
 
-        form.find('.required').each(function () {
+        var $form = $(this);
+
+        if (lots_of_stuff_already_done) {
+            lots_of_stuff_already_done = false; // reset flag
+            return; // let the event bubble away
+        }
+
+        e.preventDefault();
+
+        // do lots of stuff
+
+        $form.find('.required').each(function () {
             CheckInput($(this));
         });
 
-        if (!(form.find('label.error').length)) {
+        if (!($form.find('label.error').length)) {
 
-            form.trigger('submit');
-            //$.ajax({
-            //    type: method,
-            //    url: url,
-            //    data: form.serialize(),
-            //    success: function (data) {
-            //        console.log('succes')
-            //    },
-            //    error: function (data) {
-            //        text = btn.text('Ошибка при отправке');
-            //
-            //        setTimeout(function () {
-            //            text = btn.text(text);
-            //        }, 2000)
-            //    }
-            //});
-        }
+        
+            $.ajax({type: $form.attr('method'), url: 'js/ajax/send.php', data: $form.serialize(),
+                complete : function(){
 
-        return false;
+                    lots_of_stuff_already_done = true; // set flag
+                    $form.submit();
+
+                }
+            }); 
+          
+        };
     });
+
+    // Отправка почты
+    // $('.js--form-submit').on('click', function () {
+    //     var form = $(this).closest('form');
+    //     var url = form.attr('action');
+    //     var method = form.attr('method');
+    //     var btn = $(this);
+    //     var text = btn.text();
+    //     btn.text('Отправляем');
+
+    //     form.find('.required').each(function () {
+    //         CheckInput($(this));
+    //     });
+
+    //     if (!(form.find('label.error').length)) {
+
+    //         form.trigger('submit');
+    //         //$.ajax({
+    //         //    type: method,
+    //         //    url: url,
+    //         //    data: form.serialize(),
+    //         //    success: function (data) {
+    //         //        console.log('succes')
+    //         //    },
+    //         //    error: function (data) {
+    //         //        text = btn.text('Ошибка при отправке');
+    //         //
+    //         //        setTimeout(function () {
+    //         //            text = btn.text(text);
+    //         //        }, 2000)
+    //         //    }
+    //         //});
+    //     }
+
+    //     return false;
+    // });
 
     $('.js--shos-more').on('click', function () {
         $(this).fadeOut(0).prev('.hidden-content').fadeIn(0);

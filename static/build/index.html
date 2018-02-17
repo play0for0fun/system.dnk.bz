@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app-common.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=1231233322"></script>
   </head>
   <!-- http://jade-lang.com/reference/mixins/-->
   <body>
@@ -28,17 +28,19 @@
           <p class="fs18">Мы&nbsp;приняли ваше обращение! Обращений очень много, но&nbsp;мы&nbsp;берем не&nbsp;более 4х&nbsp;клиентов в&nbsp;месяц. Если вы&nbsp;хотите ускорить процесс построения системы в&nbsp;вашей компании, заполните опросную форму и&nbsp;мы&nbsp;свяжемся с&nbsp;вами намного быстрее!</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdO691uYBAZCITuSMcr37EMwV7EX4c4jjE9zmyvdZ9nN8WvNQ/viewform" target="_blank" class="btn">Заполнить опросную форму</a>
         </div>
         <div id="call" class="popup">
-          <form action="https://app.salesap.ru/web_forms/order" method="post" class="main-form">
-            <input type="hidden" name="source_id" value="69938">
-            <input type="hidden" name="redirect_url" value="http://system.dnk.bz/thank_you">
-            <input type="hidden" name="token" value="36d15a24fc1958b1ede8380f191cd6aa">
-            <input type="hidden" name="responsible_id" value="10134">
+          <form action="https://app.salesap.ru/web_forms/order" method="POST" class="main-form">
+            
+            <input type='hidden' name='source_id' value='69938' />
+            <input type='hidden' name='redirect_url' value='https://system.dnk.bz/thank_you/' />
+            <input type='hidden' name='token' value='a1608c6314f5cc399cdf3c4370f5c3c9' />
+            <input type='hidden' name='responsible_id' value='10117' />
+            <input type='hidden' name='deal[name]' value='' />
             <h2>Заказать обратный звонок</h2>
             <label class="label-input">
               <input type="text" name="contact[first_name]" placeholder="Имя" class="inp required"><span class="error"></span>
             </label>
             <label class="label-input">
-              <input type="text" name="contact[mobile_phone]" placeholder="Телефон" class="inp required inp-phone"><span class="error"></span>
+              <input type="text" name="contact[general_phone]" placeholder="Телефон" class="inp required inp-phone"><span class="error"></span>
             </label>
             <button type="submit" class="btn js--form-submit">Отправить</button>
           </form>
