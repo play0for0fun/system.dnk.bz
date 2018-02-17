@@ -1,0 +1,1206 @@
+.promo
+  padding-top 108px
+  padding-bottom 265px
+
+  @media sm
+    padding-top 127px
+    padding-bottom 94px
+
+  &-circle
+    position relative
+    display flex
+    align-items center
+    align-content center
+    margin 0 auto
+    width 380px
+    height 573px
+
+    @media sm
+      width 230px
+      height 270px
+      margin-bottom 67px
+
+    &:after
+      position absolute
+      content ""
+      z-index 1
+      sprite($img_wire_1)
+      top 205px
+      transform translateX(-770px)
+      left 50%
+
+      @media sm
+        top 58px
+        background url("../img/sprite-mobile.png") no-repeat -474px -4647px
+        width 260px
+        height 71px
+
+    &:before
+      position absolute
+      content ""
+      z-index 1
+      sprite($img_wire_2)
+      top 165px
+      transform translateX(230px)
+      left 50%
+
+      @media sm
+        top 24px
+        transform translateX(125px)
+        background url("../img/sprite-mobile.png") no-repeat -429px -5248px
+        width 256px
+        height 83px
+
+    &-bg
+      z-index 5
+      position absolute
+      left 50%
+      top 50%
+      transform translate3d(-49%, -50%, 0)
+      sprite($img_circle)
+      display block
+      margin 0 auto
+      text-align center
+
+      @media sm
+        transform translate3d(-50%, -50%, 0)
+        background url("../img/sprite-mobile.png") no-repeat -439px -4800px
+        width 319px
+        height 329px
+
+    .content
+      position relative
+      z-index 10
+      display block
+      width 380px
+      margin-top -9px
+
+      @media sm
+        width 100%
+
+      h2
+        display block
+        margin-bottom 26px
+
+        @media sm
+          margin-bottom 17px
+
+        i
+          @media sm
+            display inline
+
+      p
+        display block
+        text-align center
+        font-family $fFutura
+
+  &-list
+    padding-top 1px
+    margin-top -36px
+    position relative
+    text-align center
+    margin-bottom 50px
+
+    @media sm
+      margin-bottom 30px
+
+    &:before,
+    &:after
+      position absolute
+      content ""
+      sprite($decor_center)
+      top -132px
+      left 50%
+
+    &:before
+      transform translateX(-965px)
+    &:after
+      transform translateX(330px)  scale(-1, 1)
+
+    li
+      display inline-block
+      vertical-align top
+      text-align center
+      width 170px
+      margin 0 54px
+
+      @media md
+        margin 0 40px
+
+      @media sm
+        margin 0
+        width 95px
+
+      &:nth-child(1),
+      &:nth-child(3)
+        margin-top -155px
+
+        @media sm
+          margin-top -44px
+
+      span
+        display block
+        font-size 30px
+        text-align center
+        margin-bottom 6px
+
+        @media sm
+          font-size 20px
+
+      p
+        display block
+        text-align center
+
+        @media sm
+          font-size 12px
+          line-height 18px
+
+.chaos
+  position relative
+  padding-bottom 20px
+
+  &-bg
+    position absolute
+    content ""
+    sprite($bg_whirpool)
+    left 50%
+    top 50%
+    transform translate3d(-50%, -59%, 0)
+
+  .content
+    margin-left 480px
+    margin-bottom 167px
+
+    @media sm
+      margin-left 48px
+      margin-bottom 253px
+
+    p
+      margin-bottom 135px
+      line-height 33px
+
+      @media sm
+        line-height 24px
+        margin-bottom 18px
+
+    h2
+      text-align left
+
+  &-percent
+    align-items center
+    align-content center
+    margin-bottom 47px
+
+    @media md
+      flex-flow nowrap
+    @media sm
+      flex-flow wrap
+
+    h2
+      display inline-block
+      vertical-align top
+      text-align left
+      margin-top -29px
+
+      @media sm
+        display block
+        text-align center
+        width 100%
+
+      &:first-child
+        @media sm
+          margin-bottom 0
+
+        i
+          @media sm
+            display inline
+
+    &-img
+      display inline-block
+      vertical-align top
+      position relative
+      margin-left -19px
+      transform scale(0.8)
+
+      @media sm
+        transform scale(1)
+        margin-left 0
+        text-align center
+        width 100%
+        margin-bottom 20px
+
+      .img
+        sprite($img_95)
+        position relative
+        z-index 5
+        display block
+
+        @media sm
+          zoom 0.45
+          margin 0 auto
+
+      &:before
+        position absolute
+        content ""
+        sprite($img_wire_3)
+        left -121px
+        top -858px
+        z-index 0
+
+        @media sm
+          zoom 1
+          width 336px
+          height 692px
+          left 50%
+          margin-left -200px
+          background url(../img/sprite-mobile.png) no-repeat 0 0
+          background-position -0px -5922px
+
+  &-list
+    li
+      display inline-block
+      vertical-align top
+      width 24%
+      margin-bottom 65px
+      position relative
+      padding-left 23px
+
+      &:before
+        position absolute
+        content ""
+        width 10px
+        height 1px
+        background $cWhite
+        left 0
+        top 15px
+
+.expert
+  position relative
+  padding-bottom 28px
+
+  &-bg
+    position absolute
+    content ""
+    left 50%
+    top -110px
+    sprite($bg_glare)
+    transform translateX(-50%)
+    z-index 1
+
+  &-arrow
+    position relative
+    margin-bottom 55px
+
+    .img
+      display block
+      margin 0 auto
+      sprite($decor_arrows)
+      z-index 5
+      transform translateX(-15px)
+
+    &:before,
+    &:after
+      position absolute
+      content ""
+      z-index 2
+      left 50%
+
+    &:before
+      top -82px
+      sprite($img_wire_4)
+      transform translateX(-962px)
+
+    &:after
+      top -96px
+      sprite($img_wire_5)
+      transform translateX(56px)
+
+  h2
+    margin-bottom 18px
+
+  p
+    margin-bottom 140px
+
+  &-list
+    &--el
+      display block
+      margin-bottom -65px
+      position relative
+      white-space nowrap
+
+      &:nth-child(3)
+        margin-bottom -102px
+
+      &:nth-child(2)
+        margin-bottom 147px
+
+        .content
+          width 60%
+
+        a
+          position absolute
+          right 0
+          top 0
+
+    a
+      display inline-block
+      vertical-align top
+      width 50%
+      position relative
+
+      @media md
+        transform scale(0.8)
+
+      &:after
+        position absolute
+        content ""
+        sprite($icon_video)
+        left 50%
+        top 50%
+        transform translate3d(-53%, -92%, 0)
+
+        @media md
+          transform translate3d(-30%, -92%, 0)
+
+      &.michail
+        .img
+          sprite($img_michail)
+          transform translate3D(-6px, -86px, 0)
+
+      &.ilia
+        .img
+          sprite($mg_ilia)
+          transform translate3D(-47px, -119px, 0)
+
+      &.igor
+        .img
+          sprite($img_igor)
+          transform translate3D(4px, -87px, 0)
+
+    .content
+      display inline-block
+      vertical-align top
+      width 50%
+
+      span.name
+        display block
+        margin-bottom 20px
+        font-family $fFutura_m
+        font-size 24px
+        line-height 30px
+
+      ul
+        margin-left -7px
+
+        li
+          display block
+          margin-bottom 0
+          line-height 36px
+          position relative
+          padding-left 16px
+
+          &:last-child
+            margin-bottom 0
+
+          &:before
+            position absolute
+            content ""
+            width 11px
+            height 1px
+            background $cWhite
+            left 0
+            top 19px
+
+
+  &-text
+    @media md
+      flex-flow nowrap
+
+    &-number
+      display inline-block
+      vertical-align top
+      sprite($img_150)
+      margin-left -36px
+
+      @media md
+        transform scale(0.8)
+
+    .content
+      display inline-block
+      vertical-align top
+      width 525px
+      padding-top 31px
+
+      @media md
+        width 330px
+
+      h3
+        text-align left
+        font-size 30px
+        line-height 40px
+        margin-bottom 18px
+
+      span
+        display block
+        padding-left 30px
+        position relative
+
+        &:before
+          position absolute
+          content ""
+          left 0
+          top 7px
+          sprite($icon_person)
+
+.form
+  position relative
+  margin-bottom 212px
+
+  &.form-footer
+    margin-bottom  0
+    position relative
+
+    .form-bg
+      transform translate3d(-49%, -27%, 0)
+
+    &:before
+      position absolute
+      content ""
+      sprite($img_wire_14)
+      left 50%
+      transform translateX(-961px)
+      top -230px
+
+  &-bg
+    position absolute
+    sprite($bg_glare_2)
+    left 50%
+    top 50%
+    transform translate3d(-50%, -18%, 0)
+    z-index 0
+
+  .width-wrap
+    position relative
+    z-index 5
+
+  &-wire
+    position relative
+    height 173px
+    margin-bottom 60px
+
+    &:before
+      position absolute
+      content ""
+      sprite($img_wire_6)
+      top 0
+      left 50%
+      transform translateX(-110px)
+
+  h2
+    margin-bottom 108px
+
+
+.podium
+  padding-bottom  172px
+
+  &-percent
+    align-items center
+    align-content center
+    margin-bottom 80px
+
+    @media md
+      flex-flow nowrap
+
+    h2
+      display inline-block
+      vertical-align top
+      text-align left
+      margin-top -29px
+      position relative
+      z-index 10
+
+      &:nth-child(1)
+        margin-left 44px
+      &:nth-child(3)
+        margin-right 99px
+
+    &-img
+      display inline-block
+      vertical-align top
+      position relative
+      z-index 5
+
+      @media md
+        transform scale(0.7)
+
+      .img
+        sprite($img_3)
+        position relative
+        z-index 5
+        display block
+
+      &:before
+        position absolute
+        content ""
+        sprite($img_wire_7)
+        transform translateX(-965px)
+        left 50%
+        top 93px
+        z-index 0
+
+  &-list
+    position relative
+    margin 0 76px 239px
+
+    @media md
+      margin 0 0 239px
+
+    &:after
+      position absolute
+      content ""
+      sprite($bg_steps)
+      transform translateX(-44%)
+      left 50%
+      bottom -249px
+      z-index 0
+
+    li
+      display inline-block
+      vertical-align top
+      padding-left 16px
+      width 250px
+      position relative
+      z-index 10
+
+      @media md
+        width 30%
+
+      &:nth-child(1)
+        margin-top 60px
+      &:nth-child(2)
+        margin-top 40px
+
+      &:before
+        position absolute
+        content ""
+        width 11px
+        height 1px
+        background $cWhite
+        left 0
+        top 11px
+
+.steps
+  padding 104px 0 9px
+  background $cWhite
+
+  *
+    color #0c1337
+
+  h2
+    margin-bottom 58px
+
+  &-list
+    &--el
+      display block
+      margin-bottom 35px
+
+      .number
+        display inline-flex
+        vertical-align top
+        align-content center
+        align-items center
+        justify-content center
+        flex-flow wrap
+        width 70px
+        height 70px
+        border-radius 70px
+        position relative
+        background #44c0e8
+        box-shadow  inset 0 0 50px rgba(255,255,255,0.4)
+        margin-right 19px
+
+        span
+          font-size 20px
+          font-family $fFutura_m
+          color $cWhite
+          text-shadow 1px 0 0 #2d94c6
+          text-align center
+          text-transform uppercase
+
+          i
+            font-size 12px
+            color $cWhite
+            display block
+            font-family $fFutura
+            margin-top -10px
+
+        &:after
+          position absolute
+          content ""
+          left 0
+          top 0
+          right 0
+          bottom 0
+          border-radius 70px
+          background url("../img/bg--noise.png") repeat
+          opacity 0.4
+
+      .content
+        display inline-block
+        vertical-align top
+        width 730px
+        padding-top 11px
+
+        @media md
+          width 660px
+
+        span
+          display block
+
+          &.fbook
+            letter-spacing 0
+            margin-bottom 5px
+
+            .icon
+              display inline-block
+              vertical-align top
+              sprite($icon_arrow2)
+              margin 15px 10px 0
+
+            i
+              display inline
+              font-style italic
+              font-size 16px
+
+          &.fs16
+            margin-bottom 18px
+
+          &.fs12
+            text-transform uppercase
+            margin-bottom 0
+
+          &.fs14
+            text-transform uppercase
+            margin-bottom 0
+
+        p
+          &.fs16
+            margin-bottom 18px
+
+        ul
+          li
+            display block
+            position relative
+            padding-left 20px
+            font-size 16px
+            line-height 26px
+            font-family $fFutura
+            margin-bottom 12px
+
+            &:before
+              position absolute
+              content ""
+              width 11px
+              height 1px
+              background #0c1337
+              left 4px
+              top 13px
+
+        .link
+          display inline-block
+          vertical-align top
+          text-align center
+          border 1px solid #d8dbe6
+          color #6e83a0
+          border-radius 40px
+          font-size 16px
+          line-height 38px
+          font-family $fFutura
+          position relative
+          margin 5px 0 15px
+          padding 4px 21px 3px 53px
+          transition all 0.2s ease-in-out
+
+          &:hover
+            background #3cabe2
+            color $cWhite
+
+            &:before
+              sprite($icon_download_white)
+
+          &:before
+            position absolute
+            content ""
+            sprite($icon_download)
+            left 24px
+            top 50%
+            margin-top -9px
+
+        .more
+          display inline-block
+          vertical-align top
+          color #1fa2d9
+          text-decoration underline
+          transition all 0.2s ease-in-out
+
+          &:hover
+            color #1c8cba
+
+.result
+  padding 151px 0 145px
+  text-align center
+  position relative
+
+  &:after,
+  &:before
+    position absolute
+    content ""
+    bottom 50px
+    left 50%
+
+  &:before
+    sprite($img_wire_8)
+    transform translateX(-961px)
+  &:after
+    bottom 58px
+    sprite($img_wire_9)
+    transform translateX(53px)
+
+  &-bg
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    top 252px
+    sprite($bg_glare)
+    z-index 0
+
+  .width-wrap
+    position relative
+    z-index 5
+
+  h2
+    margin-bottom 40px
+
+  &-img
+    position relative
+    display inline-block
+    vertical-align top
+    margin-bottom -2px
+
+    .img
+      sprite($img_conveer)
+      transform translateX(-167px)
+
+  &-title
+    display inline-block
+    vertical-align top
+    sprite($img_conveer_title)
+    margin-bottom -54px
+
+  &-list
+    margin-bottom 40px
+    padding-top 22px
+
+    li
+      display inline-block
+      vertical-align top
+      width 24%
+      margin-bottom 39px
+      position relative
+      padding-left 23px
+      text-align left
+
+      &:before
+        position absolute
+        content ""
+        width 10px
+        height 1px
+        background $cWhite
+        left 0
+        top 15px
+
+.reason
+  position relative
+  padding 50px 0 137px
+
+  &-bg
+    position absolute
+    sprite($bg_whirpool_2)
+    bottom -443px
+    left 50%
+    transform translateX(-50%)
+
+  h3
+    font-size 30px
+    line-height 40px
+    margin-bottom 65px
+
+  &-table
+    position relative
+    margin-bottom 81px
+
+    &:after
+      position absolute
+      content ""
+      background linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0) 100%)
+      top -50px
+      bottom -50px
+      left 300px
+      width  1px
+
+    li
+      display block
+      margin-bottom 47px
+      position relative
+
+      &:after
+        position absolute
+        content ""
+        bottom -21px
+        background linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0) 100%)
+        left 0
+        right 0
+        height 1px
+
+      &:last-child
+        &:after
+          display none
+
+      p
+        display inline-block
+        vertical-align top
+
+        &:nth-child(1)
+          box-sizing border-box
+          width 370px
+          padding-right 125px
+          padding-left 26px
+
+          @media md
+            width 325px
+            padding-right 25px
+
+          &:before
+            position absolute
+            content ""
+            width 10px
+            height 1px
+            background $cWhite
+            left 5px
+            top 13px
+
+        &:nth-child(2)
+          width 560px
+
+          @media md
+            width 360px
+
+  &-percent
+    align-items center
+    align-content center
+    margin-bottom 47px
+
+    @media md
+      flex-flow nowrap
+
+    h2
+      display inline-block
+      vertical-align top
+      text-align left
+      margin-top -29px
+      position relative
+      z-index 5
+
+      &:last-child
+        margin-right 75px
+
+    &-img
+      display inline-block
+      vertical-align top
+      position relative
+      margin-left -17px
+
+      @media md
+        transform scale(0.8)
+
+      .img
+        sprite($img_95)
+        position relative
+        z-index 5
+        display block
+
+      &:before
+        position absolute
+        content ""
+        sprite($img_wire_10)
+        left 50%
+        bottom -54px
+        transform translateX(149px)
+        z-index 0
+
+.recommendation
+  background $cWhite
+  padding 130px 0  150px
+  text-align center
+  position relative
+  z-index 10
+
+  h2
+    margin-bottom 43px
+    color #0c1337
+
+  &-video
+    display inline-block
+    vertical-align top
+    position relative
+
+    img
+      display block
+      max-width 100%
+
+    &:after
+      position absolute
+      content ""
+      left 50%
+      top 50%
+      transform translate3d(-50%, -50%, 0)
+      sprite($icon_video)
+
+.free
+  position relative
+  padding 227px 0 41px
+
+  &-bg
+    position absolute
+    content ""
+    sprite($bg_glare_2)
+    left 50%
+    top 50%
+    transform translate3d(-52%, -30%, 0)
+    z-index 0
+
+  .width-wrap
+    position relative
+    z-index 10
+
+  .main-form
+    padding 77px 70px 53px
+
+    h2
+      color #0c1752
+      margin-bottom 25px
+
+    p
+      color #0c1752
+      display block
+      text-align center
+      margin-bottom 37px
+      font-size 22px
+      line-height 33px
+
+    span.form-notification
+      display block
+      text-align center
+      margin-bottom 30px
+      color #6e83a0
+
+    .inputs
+      text-align center
+      margin-bottom 51px
+
+      label
+        width 175px
+        margin 0 10px
+
+    .btn
+      padding 17px 65px 20px
+
+.solution
+  position relative
+  padding 50px 0 323px
+
+  &-bg
+    position absolute
+    sprite($bg_glare)
+    bottom -20px
+    left 50%
+    transform translateX(-50%)
+
+  &:after
+    position absolute
+    content ""
+    left 50%
+    bottom -293px
+    sprite($img_wire_11)
+    transform translateX(-311px)
+
+  h2
+    margin-bottom 44px
+
+  &-img
+    display block
+    margin 0 auto 36px
+    sprite($icon_stop)
+
+  &-list
+    padding-bottom 59px
+
+    li
+      display inline-block
+      vertical-align top
+      width 24%
+      margin-bottom 27px
+      position relative
+      padding-left 23px
+
+      &:before
+        position absolute
+        content ""
+        width 10px
+        height 1px
+        background $cWhite
+        left 0
+        top 15px
+
+.confidence
+  padding-bottom 36px
+
+  .content
+    width 480px
+    margin-bottom -49px
+
+    h2
+      text-align left
+      margin-bottom 25px
+
+  &-img
+    li
+      display inline-block
+      vertical-align top
+      margin  0 -43px
+
+      &:nth-child(1)
+        sprite($img_person_1)
+      &:nth-child(2)
+        sprite($img_person_2)
+      &:nth-child(3)
+        sprite($img_person_3)
+
+  &-list
+    padding-bottom 27px
+
+    li
+      display inline-block
+      vertical-align top
+      width 30%
+      margin-bottom 36px
+      position relative
+      padding-left 23px
+      box-sizing border-box
+
+      &:before
+        position absolute
+        content ""
+        width 10px
+        height 1px
+        background $cWhite
+        left 0
+        top 15px
+
+.price
+  position relative
+  padding-bottom 274px
+
+  &-arrows
+    display block
+    margin 0 auto 37px
+    sprite($decor_arrows3)
+    z-index 5
+    transform translateX(-15px)
+
+  &-bg
+    position absolute
+    sprite($bg_whirpool_3)
+    bottom -100px
+    left 50%
+    transform translate3d(-50%, -50%, 0)
+
+  &:before,
+  &:after
+    position absolute
+    content ""
+    z-index 2
+    left 50%
+
+  &:before
+    top 365px
+    sprite($img_wire_12)
+    transform translateX(-962px)
+
+    @media md
+      transform translateX(-932px)
+
+  &:after
+    top 614px
+    sprite($img_wire_13)
+    transform translateX(387px)
+
+    @media md
+      transform translateX(357px)
+
+  .content
+    width 800px
+    background $cWhite
+    display block
+    margin 0 auto
+    padding 55px 75px 26px
+    text-align center
+    box-sizing border-box
+    position relative
+    z-index 10
+
+    @media md
+      width 100%
+      padding 45px 55px 26px
+
+    *
+      color #0c1752
+
+    h2
+      margin-bottom 47px
+
+    .decor-shadow
+      margin-bottom 40px
+
+    .justifyed
+      margin-bottom 9px
+
+    span.fs12
+      display block
+      margin-bottom -2px
+      text-transform uppercase
+      text-align left
+
+    ul
+      li
+        display block
+        margin-bottom 15px
+        position relative
+        padding-left 17px
+        opacity 0.7
+        text-align left
+        color #0c1752
+
+        &:before
+          position absolute
+          content ""
+          width 10px
+          height 1px
+          background #0c1752
+          left 0
+          top 11px
+
+    p.fs16
+      opacity 0.7
+      margin-bottom 44px
+      text-align left

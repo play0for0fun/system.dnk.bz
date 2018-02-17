@@ -1,0 +1,775 @@
+block vars
+    - var title='Title'
+
+extends partials/layout
+
+block content
+    .hidden-block
+        div(id="form-ok").popup.popup-text
+            h2 Спасибо!
+
+            p.fs18 Мы&nbsp;приняли ваше обращение! Обращений очень много, но&nbsp;мы&nbsp;берем не&nbsp;более 4х&nbsp;клиентов в&nbsp;месяц. Если вы&nbsp;хотите ускорить процесс построения системы в&nbsp;вашей компании, заполните опросную форму и&nbsp;мы&nbsp;свяжемся с&nbsp;вами намного быстрее!
+
+            a(href="https://docs.google.com/forms/d/e/1FAIpQLSdO691uYBAZCITuSMcr37EMwV7EX4c4jjE9zmyvdZ9nN8WvNQ/viewform" target="_blank").btn Заполнить опросную форму
+
+        div(id="call").popup
+            form(action="https://app.salesap.ru/web_forms/order" method="post").main-form
+
+                input(type="hidden" name='source_id' value='69938')
+                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you')
+                input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
+                input(type="hidden" name='responsible_id' value='10134')
+
+                h2 Заказать обратный звонок
+
+                label.label-input
+                    input(type="text" name="contact[first_name]" placeholder="Имя").inp.required
+                    span.error
+
+                label.label-input
+                    input(type="text" name="contact[mobile_phone]" placeholder="Телефон").inp.required.inp-phone
+                    span.error
+
+                button(type="submit").btn.js--form-submit Отправить
+
+        div(id="policy").popup.popup-text.policy
+            h3 Политика конфиденциальности
+            p.fs18 Данное соглашение об&nbsp;обработке персональных данных разработано в&nbsp;соответствии с&nbsp;законодательством Российской Федерации.
+            p.fs18 Все лица заполнившие сведения, составляющие персональные данные на&nbsp;данном сайте, а&nbsp;также разместившие иную информацию обозначенными действиями подтверждают свое согласие на&nbsp;обработку персональных данных и&nbsp;их&nbsp;передачу оператору обработки персональных данных.
+            p.fs18 Под персональными данными Гражданина понимается нижеуказанная информация: общая информация; посетители сайта направляют свои персональные данные.
+            p.fs18 Гражданин, принимая настоящее Соглашение, выражают свою заинтересованность и&nbsp;полное согласие, что обработка их&nbsp;персональных данных может включать в&nbsp;себя следующие действия: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, уничтожение.
+            p.fs18 Гражданин гарантирует: информация, им&nbsp;предоставленная, является полной, точной и&nbsp;достоверной; при предоставлении информации не&nbsp;нарушается действующее законодательство Российской Федерации, законные права и&nbsp;интересы третьих лиц; вся предоставленная информация заполнена Гражданина в&nbsp;отношении себя лично.
+
+    div(id="loader-wrapper")
+        .cssload-loader
+            .cssload-inner.cssload-one
+            .cssload-inner.cssload-two
+            .cssload-inner.cssload-three
+
+    section.promo
+        .width-wrap
+            .promo-circle
+                .promo-circle-bg
+                .content
+                    h2 Внедрение
+                        =" "
+                        i
+                            small.blue системной
+                            =" командной"
+                        =" "
+                        i работы
+
+                    p Корпоративный тренинг
+                        =" "
+                        i по&nbsp;построению дорожных карт
+                        =" "
+                        i и&nbsp;контроль их&nbsp;реализации
+
+            ul.promo-list
+                li
+                    span.number 1
+                    p.fs18 Cотрудники
+                        i “не косячат”
+
+
+                li
+                    span.number 2
+                    p.fs18 Цели достигаются
+                        i быстрее в 2-4 раза
+
+                li
+                    span.number 3
+                    p.fs18 Собственник
+                        i контролирует всё
+
+            h3 Управляйте своим бизнесом, опираясь на
+                =" "
+                i контролируемые показатели, затрачивая не&nbsp;более
+                    =" "
+                    small.blue 15&nbsp;минут в&nbsp;день.
+
+    section.chaos
+        .chaos-bg
+        .width-wrap
+            .content
+                p Если вы&nbsp;серьезно подходите к&nbsp;проблеме низкой эффективности вашей команды придется потратить время и&nbsp;внимательно прочитать информацию на&nbsp;нашем сайте.
+
+                h2 Хаос&nbsp;&mdash; это болезнь вашей компании. Болезнь надо признать, а&nbsp;к&nbsp;её&nbsp;лечению необходимо подходить
+                    =" "
+                    small.blue основательно.
+
+            .chaos-percent.justifyed
+                h2 Проблемы, 
+                    =" "
+                    i которые
+
+                .chaos-percent-img
+                    .img
+
+                h2 компаний  
+                    = " "
+                    small.blue никогда
+                    =" "
+                    i не&nbsp;решат! "
+
+            .chaos-list.justifyed
+                li.fs18 Сотрудники не&nbsp;понимают, какие задачи перед ними стоят
+                li.fs18 Есть идеи, как выйти на&nbsp;новый уровень, но&nbsp;нет реализации
+                li.fs18 Задачи выполняются хаотично, без единой системы контроля
+                li.fs18 Команда контролирует руководство, а&nbsp;не&nbsp;наоборот
+                li.fs18 Нет пошагового прописанного плана по&nbsp;достижению целей
+                li.fs18 Руководитель&nbsp;80% времени занимается мелкой текучкой
+                li.fs18 Без постоянного контроля руководителя, показатели ухудшаются
+                li.fs18 Исполнители &laquo;косячат&raquo; и&nbsp;закидывают руководителя отмазками
+                li.fs18 Каждый раз приходится по&nbsp;10&nbsp;раз объяснять одну и&nbsp;ту&nbsp;же задачу
+
+    section.expert
+        .expert-bg
+        .width-wrap
+            .expert-arrow
+                .img
+
+            h2 Мы&nbsp;знаем, как избавиться от&nbsp;этих проблем
+                =" "
+                i.blue раз и&nbsp;навсегда!
+
+            p.text-center Потому что мы&nbsp;делали это уже сотни раз!
+
+            ul.expert-list
+                li.expert-list--el
+                    a(data-fancybox="" href="https://www.youtube.com/watch?v=EcqI4gvRl9s&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0").michail
+                        .img
+
+                    .content
+                        span.name Михаил Колмаков
+
+                        ul
+                            li.fs18 Построил и&nbsp;внедрил более 150 дорожных карт
+                            li.fs18 Модератор программы &laquo;Бизнес Завод&raquo; ШБ&nbsp;Синергия
+                            li.fs18 Спикер програмы &laquo;Миллиард за&nbsp;миллион&raquo;
+                            li.fs18 Со-основатель проекта &laquo;Несистемная системность&raquo;
+                            li.fs18 Со-основатель маркетингового агенства DNK Club
+                            li.fs18 Со-основатель IT-проекта EvoDesk
+
+                li.expert-list--el
+                    a(data-fancybox="" href="https://www.youtube.com/watch?v=-_SlpKR8QJQ&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0").ilia
+                        .img
+
+                    .content
+                        span.name Илья Алябушев
+
+                        ul
+                            li.fs18 Основатель компании Практика Системного Бизнеса
+                            li.fs18 Адаптировал мировую практику гибкого управления сотрудниками под реалии компаний&nbsp;РФ и&nbsp;СНГ.
+                            li.fs18 Внедрил системную работу сотрудников по&nbsp;Agile в&nbsp;100 командах 22&nbsp;года проектного опыта, 8&nbsp;лет опыта внедрений
+                            li.fs18 Следует миссии&nbsp;&mdash; привести страну к&nbsp;экономическую чуду за&nbsp;счёт изменения культуры управления
+
+                li.expert-list--el
+                    a(data-fancybox="" href="https://www.youtube.com/watch?v=j0RV6oP8W98&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0").igor
+                        .img
+
+                    .content
+                        span.name Игорь Масленников
+
+                        ul
+                            li.fs18 Собственник интернет-магазина AgmaShop (оборот &gt;200&nbsp;млн. руб.)
+                            li.fs18 Спикер программы &laquo;Бизнес Завод&raquo; ШБ&nbsp;Синергия
+                            li.fs18 Спикер програмы &laquo;Миллиард за&nbsp;миллион&raquo;
+                            li.fs18 Со-основатель проекта &laquo;Несистемная системность&raquo;
+                            li.fs18 Со-основатель маркетингового агенства DNK Club
+                            li.fs18 Со-основатель IT-проекта EvoDesk
+
+            .expert-text.justifyed
+                .expert-text-number
+                .content
+                    h3
+                        small.blue успешных
+                        =" "
+                        =" внедрений систем проектного "
+                        =" "
+                        i управления в&nbsp;организации различного
+                        =" "
+                        i масштаба
+
+                    span от&nbsp;5&nbsp;до&nbsp;1500 сотрудников
+
+    section.form
+        .form-bg
+        .width-wrap
+            .form-wire
+
+            h2 Не&nbsp;можете терпеть хаос и&nbsp;беспорядок?
+                br
+                br
+                i
+                    small.blue Заполняйте форму,
+                    =" "
+                    =" мы проведем бесплатное "
+                    =" "
+                i собеседование с&nbsp;вами и&nbsp;расскажем, как мы
+                =" "
+                i можем помочь
+
+            form(action="https://app.salesap.ru/web_forms/order" method="post").main-form
+
+                input(type="hidden" name='source_id' value='69904')
+                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you')
+                input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
+                input(type="hidden" name='responsible_id' value='10134')
+
+                .main-form--section
+                    h4 Годовой оборот вашей компании
+
+                    .justifyed
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24915]" value="до 100 млн. руб.")
+                            span до 100 млн. руб.
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24915]" value="от 100 до 800 млн. руб.")
+                            span от 100 до 800 млн. руб.
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24915]" value="от 800 млн. руб.")
+                            span от 800 млн. руб.
+
+                    h4 Количество менеджеров и&nbsp;руководителей направлений
+
+                    .justifyed
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24917]" value="до 10 человек")
+                            span до 10 человек
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24917]" value="от 10 до 30 человек")
+                            span от 10 до 30 человек
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24917]" value="от 30 человек")
+                            span от 30 человек
+
+                    .justifyed
+                        label.label-radio
+                            input(type="radio" name="deal[custom_24916]" value="Я - собственник")
+                            .psevdoradio
+                            span Я - собственник
+                        label.label-radio
+                            input(type="radio" name="deal[custom_24916]" value="Я - топ-менеджер")
+                            .psevdoradio
+                            span Я - топ-менеджер
+                        label.label-radio
+                            input(type="radio" name="deal[custom_24916]" value="Я - исполнитель")
+                            .psevdoradio
+                            span Я - исполнитель
+
+                    .decor-shadow
+
+                    h4 Введите Ваши контактные данные:
+
+                    .justifyed.inputs
+                        label.label-input
+                            input(type="text" name="contact[first_name]" placeholder="Имя").inp.required
+                            span.error
+
+                        label.label-input
+                            input(type="text" name="contact[mobile_phone]" placeholder="Телефон").inp.required.inp-phone
+                            span.error
+
+                        label.label-input
+                            input(type="text" name="contact[email]" placeholder="E-mail").inp.required.inp-mail
+                            span.error
+
+                        label.label-input
+                            input(type="text" name="contact[work_city]" placeholder="Город").inp.required
+                            span.error
+
+
+                    button(type="submit").btn.js--form-submit Получить аудит от DNK Системы
+
+    section.podium
+        .width-wrap
+            .justifyed.podium-percent
+                h2 За счет чего строится 
+                    =" "
+                    i
+                        small.blue система
+                        =" "
+                        =" в компании?"
+
+                .podium-percent-img
+                    .img
+
+                h2 столпа 
+                    =" "
+                    ="внедрения "
+                    =" "
+                    i системной 
+                        =" "
+                        ="работы"
+
+            .podium-list.justifyed
+                li.fs18 Постановка амбициозной и&nbsp;измеримой цели, которая мотивирует всю команду
+                li.fs18 Составление дорожной карты по&nbsp;достижению этой цели по&nbsp;действиям, ответственным и&nbsp;дедлайнам
+                li.fs18 Ежедневный контроль команды на&nbsp;протяжении 2х&nbsp;месяцев для внедрения системной работы
+
+            h2 Мы&nbsp;будем проводить совещания с&nbsp;вашей командой
+                =" "
+                i
+                    small.blue каждый день
+                    =" "
+                    =" до тех пор, пока "
+                    =" "
+                    small.blue системная работа 
+                =" "
+                i не&nbsp;войдет в&nbsp;
+                    =" "
+                    small.blue привычку
+
+    section.steps
+        .width-wrap
+            h2 Этапы внедрения
+                =" "
+                i системной командной работы
+
+            ul.steps-list
+                .steps-list--el
+                    .number
+                        span I
+                            i этап
+
+                    .content
+                        span.fbook Подготовительный. Опрос клиента
+                        span.fs16.fbook До&nbsp;начала практического тренинга команда должна заполнить опросную форму
+                        span.fs12.fmedium Задачи этапа:
+
+                        ul
+                            li Провести онлайн опрос ожиданий и&nbsp;потребностей в&nbsp;системности и&nbsp;планировании для участников стратегической сессии
+                            li Скорректировать программу сессии и&nbsp;внедрения под реальные запросы и&nbsp;текущие возможности команд
+
+                        a(href="https://docs.google.com/forms/d/e/1FAIpQLSdO691uYBAZCITuSMcr37EMwV7EX4c4jjE9zmyvdZ9nN8WvNQ/viewform" target="_blank").link Заполнить опросную форму подготовительного этапа
+
+
+                .steps-list--el
+                    .number
+                        span II
+                            i этап
+
+                    .content
+                        span.fbook Проведение сессии с&nbsp;экспертами
+                            .icon
+                            i 2 дня
+
+                        p.fs16.fbook В&nbsp;сессии принимают участие собственник, руководители направлений, их&nbsp;прямые подчиненные и&nbsp;сотрудники по&nbsp;результатам заполнения анкет. Для одного направления проектная группа не&nbsp;более 5&nbsp;человек.
+
+                        span.fs14.fmedium ДЕНЬ ПЕРВЫЙ. Идея системности и&nbsp;формирования цели.
+                        p.fs16.fbook  В&nbsp;первый день команда освоит базовые знания о&nbsp;практике системной работы и&nbsp;сформулирует общую мотивирующую цель с&nbsp;измеримыми показателями.
+                        .hidden-content
+                            p.fs16.fbook Задачи дня
+                            ul
+                                li Продать идею системной работы участникам, объяснить зачем мы&nbsp;здесь находимся и&nbsp;что именно будем делать на&nbsp;сессии и&nbsp;после, чтобы вовлечь всех участников в&nbsp;работу.
+                                li Продемонстрировать лидерам направлений методологию и&nbsp;преимущества системной работы и&nbsp;проектного управления.
+                                li Показать на&nbsp;практике принцип подготовки и&nbsp;реализации проекта на&nbsp;примере карты целей и&nbsp;системой работы.&nbsp;4. Заполнить вместе с&nbsp;командами блок Карты целей для подготовки к&nbsp;выгрузке идей и&nbsp;возможностей.
+                                li Заполнить Блок Продукт компании наполнить гипотезами и&nbsp;решениями.
+                                li Заполнить Блок Продукт компании наполнить гипотезами и&nbsp;решениями.
+                                li Заполнить Блок Продукт компании наполнить гипотезами и&nbsp;решениями.
+                                li Заполнить Блок Принцивы и&nbsp;ценности команды
+                                li Упаковать картину ожидаемого будущего на&nbsp;2018&nbsp;год.
+                                li Сформулировать мотивирующие достижимые цели компаний с&nbsp;показателями.
+
+                        a().more.fs16.fbook.mb35.js--shos-more Подробнее
+
+                        span.fs14.fmedium ДЕНЬ второй. Постановка задач и&nbsp;дорожная карта.
+                        p.fs16.fbook  Во&nbsp;второй день команда получит техники постановки задач и&nbsp;гопотез, руководители освоят формулу делегирования. Для каждого направления участники команды составят дорожную карту и&nbsp;перенесут задачи в&nbsp;IT сервис для командного управления.
+                        .hidden-content
+                            p.fs16.fbook Задачи дня
+                            ul
+                                li Теория методология составления дорожных карт
+                                li Практика составления дорожных карт
+                                li Показать принципы ритма системной работы для гарантированного достижения цели компании.
+                                li Показать на&nbsp;практике принцип формулировки правильной задачи по&nbsp;формуле делегирования
+                                li Показать технику формирования и&nbsp;утверждение гипотезы у&nbsp;команды
+                                li Сформировать набор измеримых гипотез по&nbsp;достижению цели по&nbsp;каждому направлению
+                                li Практика формирования дорожных карт для утвежденных гипотез и&nbsp;сформулированных задач
+                                li Разложить дорожную карту по&nbsp;действиям, отвественным, ожидаемым результат и&nbsp;срокам выполнения
+                                li Практика системной работы совещания, бриффинги, ретроспективы
+
+
+                        a().more.fs16.fbook.mb35.js--shos-more Подробнее
+
+                        span.fs14.fmedium ДЕНЬ третий. Индивидуальная корректировка дорожных карт.
+                        p.fs16.fbook  Третий день необходим, в&nbsp;случае, когда собственнику необходима более детальная проработка модераторами каждого отдельного шага до&nbsp;достижения цели и&nbsp;корректировка составленной дорожной карты.
+                        .hidden-content
+                            p.fs16.fbook Задачи дня
+                            ul
+                                li Дать обратную связь на&nbsp;сформулированные карты для каждой команды от&nbsp;экспертов и&nbsp;Координаторов.
+                                li Подготовить вехи достижения цели с&nbsp;каждой командой.
+                                li Выписать проекты с&nbsp;конкретными действиями с&nbsp;каждой командой.
+                                li Разложить каждую отдельную гипотезу всех направлений по&nbsp;пошаговым действиям с&nbsp;распределением ответственных, дедлайнов и&nbsp;ожидаемых результатов от&nbsp;выполнения задачи.
+                                li                              Стартовать ритм системной работы для выполнения проектов и&nbsp;достижения цели с&nbsp;каждой командой.
+
+
+                        a().more.fs16.fbook.mb35.js--shos-more Подробнее
+                        br
+                        a(href="" target="_blank").link Скачать пример дорожной карты компании
+
+                .steps-list--el
+                    .number
+                        span III
+                            i этап
+
+                    .content
+                        span.fbook Внедрение с&nbsp;координатором
+                            .icon
+                            i 2 месяца
+
+                        p.fs16.fbook Системная работа формируется только благодаря привычке и&nbsp;ежедневному повторению действий по&nbsp;планированию, оценке эффективности и&nbsp;корректировки направлений. Именно поэтому мы&nbsp;внедряем наших координатов в&nbsp;каждую из&nbsp;команд для создания ритма эффективной проектной работы.
+                        p.fs16.fbook Координатор эксперт команды &laquo;ДНК Системы&raquo;, который ежедневно помогает командам оставаться в&nbsp;ритме системной работы для формирования привычки
+
+                        .hidden-content
+                            p.fs16.fbook Задачи дня
+                            ul
+                                li Обеспечить ритм ежедневной поддежки
+                                li Сформировть у&nbsp;команды навык фокусировки на&nbsp;поставленных задачах
+                                li Сформировать у&nbsp;команды навык расставления приоритетов и&nbsp;ответственных
+
+                            p.fs16.fbook Конкретные действия на этапе
+                            ul
+                                li Ежедневная 15&nbsp;минутный бриффинг с&nbsp;участниками команды
+                                li Еженедельное совместное планирование задач по&nbsp;проектам с&nbsp;командой сотрудников 1,5 часа
+                                li Контроль качества внедрения с&nbsp;обратной связью для руководителя
+                                li Контроль реализации ключевых проектов развития с&nbsp;экспертной оценкой и&nbsp;рекомендациями
+                                li Составление отчетной документации для собственника о&nbsp;ходе реализации поставленных задач с&nbsp;отчетом об&nbsp;эффективности сотрудников
+
+                        a().more.fs16.fbook.mb35.js--shos-more Подробнее
+
+    section.result
+        .result-bg
+        .width-wrap
+            h2 Что Вы получите 
+                =" "
+                small.blue в&nbsp;результате 
+                =" "
+                i после внедрения наших отработанных
+                =" "
+                i  технологий?
+
+            .result-img
+                .img
+
+            .result-title
+            h2 по&nbsp;реализации своих проектов точно и&nbsp;в&nbsp;срок!
+
+            ul.result-list.justifyed
+                li.fs18 По&nbsp;всем направлениям сформулированы точные измеряемые цели
+                li.fs18 Электронную систему контроля сотрудников и&nbsp;их&nbsp;эффективности
+                li.fs18 У&nbsp;каждой задачи есть отвественный, статус и&nbsp;срок
+                li.fs18 Снижение затрат на&nbsp;выполнение отдельного проекта
+                li.fs18 Возможность корректировать работу, не&nbsp;причиняя вреда
+                li.fs18 Ритм ежедневной эффективной системной работы
+
+            h2 Сотрудники сами находят
+                =" "
+                i решение проблемы и&nbsp;доводят работу
+                =" "
+                i.blue до&nbsp;результата
+
+    section.reason
+        .reason-bg
+        .width-wrap
+            h3
+                small.blue Причины, 
+                =" "
+                =" по которым чаще всего наведение "
+                i порядка в компании откладывают "
+                    small.blue на&nbsp;потом
+                    ='"'
+
+            ul.reason-table
+                li
+                    p.fs18 У&nbsp;меня нет времени наводить порядок...
+                    p.fs18 А&nbsp;откуда оно появится, если в&nbsp;компании бардак и&nbsp;всю работу приходится делать самому?
+                li
+                    p.fs18 Сейчас немного раскидаюсь и&nbsp;обращусь...
+                    p.fs18 К&nbsp;сожалению, вероятность того, что вы&nbsp;&laquo;немного раскидаетесь&raquo; крайне мала. Чаще всего рутина засасывает все глубже и&nbsp;не&nbsp;отпускает.
+                li
+                    p.fs18 Они дебилы и&nbsp;нормально работать не&nbsp;будут
+                    p.fs18 Вам придется выбрать: либо вы&nbsp;остаетесь на&nbsp;текущей позиции и&nbsp;медлено скатываетесь вниз, либо делаете так, что &laquo;дебилы&raquo; начинают работать
+                li
+                    p.fs18 Я&nbsp;не&nbsp;верю, что этот бизнес можно поднять
+                    p.fs18 Если вы&nbsp;не&nbsp;горите желанием зарабатывать день и&nbsp;масштабировать свой бизнес, к&nbsp;сожалению мы&nbsp;ничем не&nbsp;можем помочь
+                li
+                    p.fs18 Мы&nbsp;уже внедряли задачник, и&nbsp;он&nbsp;не&nbsp;работает
+                    p.fs18 Ни&nbsp;один задачник не&nbsp;работает без методики управления и&nbsp;привычки
+
+            .reason-percent.justifyed
+                h2 Рутина  —
+                    =" "
+                    small.blue враг
+                    =","
+                    i который побеждает
+
+                .reason-percent-img
+                    .img
+
+                h2 компаний  
+                    i
+
+    section.recommendation
+        .width-wrap
+            h2 Советы от&nbsp;собственников,
+
+
+                =" "
+                i которые
+                    =" "
+                    small.blue уже внедрили
+                    =" "
+                    =" систему"
+                =" "
+                i в&nbsp;своих компаниях!
+
+            .recommendation-video
+                iframe(src="https://www.youtube.com/embed/vPVfR_cpcJw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+
+    section.free
+        .free-bg
+
+        .width-wrap
+            form(action="https://app.salesap.ru/web_forms/order" method="post").main-form
+
+                input(type="hidden" name='source_id' value='69939')
+                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you')
+                input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
+                input(type="hidden" name='responsible_id' value='10134')
+
+                h2 Бесплатный вебинар!
+
+                p.fbook Хотите получить больше информации из&nbsp;первых уст?
+                p.fbook Посетите бесплатный вебинар от&nbsp;Михаила и&nbsp;Ильи и&nbsp;узнайте, в&nbsp;чем главный ключ к&nbsp;построению системы в&nbsp;своем бизнесе!
+                    =" "
+                    i И&nbsp;получите шанс выиграть 100&nbsp;тыс. руб.&nbsp;на&nbsp;внедрение системной работы!
+
+                span.form-notification.fs16.fbook Дата ближайшего вебинара: 22.02.2018 20.00 по Мск.
+
+                .inputs
+                    label.label-input
+                        input(type="text" name="contact[first_name]" placeholder="Имя").inp.required
+                        span.error
+
+                    label.label-input
+                        input(type="text" name="contact[email]" placeholder="E-mail").inp.required.inp-mail
+                        span.error
+
+                button(type="submit").btn.js--form-submit Записаться на вебинарs
+
+    section.solution
+        .solution-bg
+        .width-wrap
+            .solution-img
+
+            h2 Как можно решить проблему 
+
+                =" "
+                i построения системы 
+                    =" "
+                    small.blue без нас? 
+
+            .solution-list.justifyed
+                li.fs18 Нанять крутого исполнительного директора
+                li.fs18 Отдать все отделы на&nbsp;аутсорс
+                li.fs18 Нанять беременных ипотечниц
+                li.fs18 Отдать&nbsp;50% бизнеса системному партнеру
+                li.fs18 Пригласить хабардистов сектантов, мотиваторов
+                li.fs18 Объявить себя банкротом или продать бизнесф
+
+            h2 Можно ли выйти на крупную прибыль 
+                =" "
+                small.blue без системности?
+                =" "
+                br
+                br
+                i Можно! 
+                =" "
+                i Но только проливая кровь...
+
+    section.confidence
+        .width-wrap
+            .content
+                h2 Почему мы&nbsp;
+                    small.blue так уверены,
+                    =" "
+                    i что у&nbsp;нас получится привести
+                    =" "
+                    i ваш хаос в&nbsp;полный порядок?
+
+                ul.confidence-img
+                    li
+                    li
+                    li
+
+            ul.confidence-list.justifyed
+                li.fs18 Мы&nbsp;знаем, как правильно сформулировать цель, чтобы ее&nbsp;приняла команда
+                li.fs18 8&nbsp;лет практики внедрили SCRUM и&nbsp;AGILE более чем в&nbsp;150 компаниях
+                li.fs18 Наша техника создания дорожных карт подходит для любого бизнеса
+                li.fs18 Мы&nbsp;понимаем боли собственника и&nbsp;говорим с&nbsp;ним на&nbsp;одном языке
+                li.fs18 Мы&nbsp;внедряет самые передовые технологии гибкого управления
+                li.fs18 Доводим внедрение до&nbsp;привычки за&nbsp;счет ежедневной поддержки
+
+            h2 Мы&nbsp;не&nbsp;ссоримся с&nbsp;сотрудниками,
+                =" "
+                i мы&nbsp;обращаем их&nbsp;в&nbsp;свою &laquo;веру&raquo;
+                =" "
+                i для достижения
+                    =" "
+                    small.blue общих целей!
+
+    section(id="price").price
+        .price-bg
+        .width-wrap
+            .price-arrows
+
+            .content
+                h2 Стоимость программы и&nbsp;условия
+
+                .decor-shadow
+
+                .justifyed
+                    span.fbook Индивидуальный корпоративный тренинг:
+                    span.fmedium 1 000 000  руб.
+
+                span.fs12.fmedium В&nbsp;стоимость включено:
+
+                ul
+                    li.fs16 2&nbsp;дня интенсивной сессии (максимум 5&nbsp;наравлений)
+                    li.fs16 Детальная разработка дорожной карты одного направления
+                    li.fs16 2&nbsp;месяца ежедневного соопровождения координатором одного направления
+
+                p.fs16.fbook На&nbsp;тренинге присутсвутют только представители вашей компании и&nbsp;вы&nbsp;можете быть максимально откровенными
+
+                .decor-shadow
+
+                .justifyed
+                    span.fbook Групповой корпоративный тренинг:
+                    span.fmedium 300 000 руб.
+
+                span.fs12.fmedium В&nbsp;стоимость включено:
+
+                ul
+                    li.fs16 2&nbsp;дня интенсивной сессии (максимум 3&nbsp;представителя для одного направления)
+
+                .decor-shadow
+
+                .justifyed
+                    span.fbook Дополнительные услуги
+
+                .justifyed
+                    span.fmedium.fs12 Детальная разработка дорожной карты для одного направления
+                    span.fmedium 150 000 руб.
+
+                .justifyed
+                    span.fmedium.fs12 Месяц сопровождения координатором
+                    span.fmedium 75 000 руб.
+
+    section(id="form").form.form-footer
+        .form-bg
+        .width-wrap
+            h2 Твердо решили избавиться от&nbsp;хаоса и
+                =" "
+                i навести порядок?
+
+                br
+                i
+                    small.blue Заполняйте форму,
+                    =" "
+                    =" и ваш бизнес "
+                =" "
+                i станет управляемым, сотрудники инициативными,
+                =" "
+                i а&nbsp;цели будут достигнуты!
+
+                i.small.fs18.fbook * Если вы в другом городе ­ мы проводим выездные мероприятия
+
+            form(action="https://app.salesap.ru/web_forms/order" method="post").main-form
+
+                input(type="hidden" name='source_id' value='69937')
+                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you')
+                input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
+                input(type="hidden" name='responsible_id' value='10134')
+
+                .main-form--section
+                    h4 Годовой оборот вашей компании
+
+                    .justifyed
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24915]" value="до 100 млн. руб.")
+                            span до 100 млн. руб.
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24915]" value="от 100 до 800 млн. руб.")
+                            span от 100 до 800 млн. руб.
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24915]" value="от 800 млн. руб.")
+                            span от 800 млн. руб.
+
+                    h4 Количество менеджеров и&nbsp;руководителей направлений
+
+                    .justifyed
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24917]" value="до 10 человек")
+                            span до 10 человек
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24917]" value="от 10 до 30 человек")
+                            span от 10 до 30 человек
+                        label.label-radio-text
+                            input(type="radio" name="deal[custom_24917]" value="от 30 человек")
+                            span от 30 человек
+
+                    .justifyed
+                        label.label-radio
+                            input(type="radio" name="deal[custom_24916]" value="Я - собственник")
+                            .psevdoradio
+                            span Я - собственник
+                        label.label-radio
+                            input(type="radio" name="deal[custom_24916]" value="Я - топ-менеджер")
+                            .psevdoradio
+                            span Я - топ-менеджер
+                        label.label-radio
+                            input(type="radio" name="deal[custom_24916]" value="Я - исполнитель")
+                            .psevdoradio
+                            span Я - исполнитель
+
+                    h4 Какой формат программы вас интереует?
+
+                    .justifyed
+                        label.label-radio-text.one-half
+                            input(type="radio" name="deal[custom_24918]" value="Индивидуальный - 1 млн.руб.")
+                            span Индивидуальный - 1 млн.руб.
+                        label.label-radio-text.one-half
+                            input(type="radio" name="deal[custom_24918]" value="Групповой - 0,3 млн.руб.")
+                            span Групповой - 0,3 млн.руб.
+
+                    .decor-shadow
+
+                    h4 Введите Ваши контактные данные:
+
+                    .justifyed.inputs
+                        label.label-input
+                            input(type="text" name="contact[first_name]" placeholder="Имя").inp.required
+                            span.error
+
+                        label.label-input
+                            input(type="text" name="contact[mobile_phone]" placeholder="Телефон").inp.required.inp-phone
+                            span.error
+
+                        label.label-input
+                            input(type="text" name="contact[email]" placeholder="E-mail").inp.required.inp-mail
+                            span.error
+
+                        label.label-input
+                            input(type="text" name="contact[work_city]" placeholder="Город").inp.required
+                            span.error
+
+                    button(type="submit").btn.js--form-submit Получить аудит от DNK Системы
+
+    footer.footer
+        .width-wrap.justifyed
+            a(href="mailto:system@dnk.bz").footer-mail.fs16.fbook system@dnk.bz
+
+            a(data-fancybox="modal-policy" data-src="#policy" href="javascript:;").fs16.fbook Политика конфиденциальности
+
+            span.fs16.fbook Разработано club.dnk.bz

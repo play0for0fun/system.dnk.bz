@@ -1,0 +1,61 @@
+.popup
+  width 710px
+  padding 60px
+  max-height 80vh
+  overflow-y scroll
+
+  @media sm
+    width 280px
+    padding 15px
+
+  .main-form
+    width 100%
+
+    @media sm
+      padding-top 0
+
+  h2
+    color #0c1752
+    margin-bottom 40px
+
+    @media sm
+      margin-bottom 20px
+
+  .btn
+    margin-top 20px
+
+    @media sm
+      margin-top 20px
+
+  &.free
+    padding 0
+
+  &.popup-text
+    text-align center
+
+    .icon-tg
+      display block
+      width 80px
+      height 80px
+      margin 0 auto 20px
+
+    *
+      color #0c1752
+
+    h3
+      margin-bottom 30px
+
+    p
+      margin-bottom 15px
+
+      &:last-child
+        margin-bottom 0
+
+      a
+        font-family $fFutura_m
+        text-decoration underline
+
+  &.policy
+    text-align left
+
+

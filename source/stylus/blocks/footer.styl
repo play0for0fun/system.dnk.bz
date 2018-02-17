@@ -1,0 +1,34 @@
+footer.footer
+  text-align center
+  padding 50px 0
+  position relative
+  z-index 10
+
+  &.inner
+    position absolute
+    left 0
+    right 0
+    bottom 0
+
+  .width-wrap
+    @media sm
+      display block
+      text-align center
+
+  a
+    color #95a9c5
+    text-decoration underline
+    transition all 0.2s ease-in-out
+
+    @media sm
+      display block
+      margin-bottom 20px
+
+    &:hover
+      color #b3e7fd
+
+.psevdofooter
+  height 126px
+
+  @media sm
+    height 218px

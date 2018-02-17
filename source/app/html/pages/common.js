@@ -1,8 +1,3 @@
-/**
- * appName - http://chidi-frontend.esy.es/
- * @version v0.1.0
- * @author bev-olga@yandex.ru
- */
 $(document).ready(function () {
     var BODY = $('body');
     var WINDOW = $(window);

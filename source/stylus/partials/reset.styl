@@ -1,0 +1,107 @@
+html *
+  max-height 999999px //android font-size fix
+  -webkit-font-smoothing antialiased
+  outline none
+
+html
+body
+  margin 0
+  padding 0
+  width 100%
+  height 100%
+  min-width 320px
+
+body
+  font-family $fAcrom
+  font-size 14px
+  color $cBlack
+  min-height 100%
+  height 100%
+  position relative
+  -webkit-text-size-adjust 100% // ios font-size fix
+  background linear-gradient(to right, rgba(14,18,55,1) 0%,rgba(29,93,135,1) 50%,rgba(14,18,55,1) 100%)
+
+  &:after
+    position absolute
+    left 0
+    top 0
+    right 0
+    botto 0
+    z-index 1px
+    background url("../img/bg--noise.png") repeat
+
+.page-wrap
+  min-height 100%
+  position relative
+  min-width 320px
+  overflow hidden
+
+form,
+p,
+ul, ol,
+dl, dt, dd,
+h1, h2, h3, h4, h5, h6
+  margin 0 
+  padding 0 
+  font-weight normal 
+  list-style none
+
+/***** ie fix ****/
+a img
+  border none
+  text-decoration none
+
+// .section
+
+.pull-right
+  float right
+
+.pull-left
+  float left
+
+.text-center
+  text-align center
+
+.text-right
+  text-align right
+   
+.section
+  position relative
+
+.width-wrap
+  display block
+  margin 0 auto
+  width 960px
+  box-sizing border-box
+
+  @media md
+    width 750px
+
+  @media sm
+    width 100%
+    padding 0 15px
+
+*.justifyed
+  display flex
+  justify-content space-between
+  align-items flex-start
+  flex-flow wrap
+  box-sizing border-box
+
+// отступы между горизонтальными li
+ol, ul, .grid
+  list-style none 
+  font-size:0 
+  line-height:0 
+  letter-spacing:-1px 
+
+
+li, .grid-item
+  line-height:normal 
+  letter-spacing:normal 
+  display:inline-block 
+  vertical-align top 
+  zoom:1
+
+.hidden-block
+  display none !important

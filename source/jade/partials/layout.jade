@@ -1,0 +1,20 @@
+doctype html
+html
+    block vars
+    head
+        meta(charset='utf-8')
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        title("Выигрываем конкретную борьбу за счёт внедрения системной работы в компании и команды")
+        meta(name="viewport" content="width=device-width")
+        link(rel='icon' href='img/favicon.ico' type='image/x-icon')
+        link(rel='stylesheet', href="css/style.css")
+
+        script(src="js/app-common.js")
+        script(src="js/app.js")
+
+    include mixins
+
+    body
+        .page-wrap
+            include header
+            block content

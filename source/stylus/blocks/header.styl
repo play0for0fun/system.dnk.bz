@@ -1,0 +1,101 @@
+.header
+  padding 30px 0 30px
+  transition all 0.2s ease-in-out
+  position fixed
+  left 0
+  top 0
+  right 0
+  z-index 20
+
+  @media sm
+    padding 20px 0
+
+  &.fixed
+    background #195079
+    padding 15px 0
+    box-shadow  12px 0 21px rgba(18,47,79,0.6)
+
+  &--logo
+    display inline-block
+    vertical-align top
+    width 150px
+
+    white-space nowrap
+    @media sm
+      width auto
+
+    &-img
+      display inline-block
+      vertical-align top
+      background url("../img/logo_dnk.png") no-repeat 0 0
+      height 65px
+      width 198px
+
+      @media sm
+        zoom 0.5
+        background url("../img/logo--header.png") no-repeat 0 0
+        width 73px
+        height 52px
+        margin-right 3px
+        margin-top 6px
+
+    span
+      display inline-block
+      vertical-align top
+      font-family $fFutura_m
+      font-size 35px
+      line-height 47px
+
+      @media sm
+        font-size 13px
+        line-height normal
+        padding-top 2px
+        display none
+
+  &--btn
+    display inline-block
+    vertical-align top
+    font-family $fFutura_m
+    padding 5px 22px 8px
+    border 1px solid rgba(255,255,255,0.25)
+    margin-top 5px
+    color $cWhite
+
+    @media sm
+      padding 2px 3px 2px
+      font-size 14px
+
+  &--contacts
+    text-align right
+    width 150px
+
+    @media sm
+      width auto
+
+    &-phone
+      display block
+      font-family $fFutura_m
+      font-size 18px
+
+      @media sm
+        font-size 12px
+        line-height 18px
+
+    &-call
+      font-size 16px
+      line-height 24px
+      color $cBlue_l
+      text-decoration underline
+      transition all 0.2s ease-in-out
+
+      @media sm
+        font-size 14px
+        line-height 17px
+
+      &:hover
+        color #b3e7fd
+
+.mac
+ .header--logo
+  span
+    line-height 43px

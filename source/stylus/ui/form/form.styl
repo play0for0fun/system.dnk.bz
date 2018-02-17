@@ -1,0 +1,225 @@
+.main-form
+  width 800px
+  background $cWhite
+  display block
+  margin 0 auto
+  padding 62px 70px 53px
+  text-align center
+  box-sizing border-box
+
+  @media md
+    width 100%
+    padding 52px 50px 43px
+
+  @media sm
+    padding 52px 25px 31px
+    white-space normal
+
+  h4
+    margin-bottom 21px
+
+    @media sm
+      white-space normal
+      margin-bottom 16px
+      line-height 22px
+
+  label.label-radio-text
+    display inline-block
+    vertical-align top
+    width 28%
+    cursor pointer
+
+    @media sm
+      box-sizing border-box
+      display block
+      width auto
+      margin 0 15px 15px
+
+    &:hover
+      span
+        border 1px solid #5bc5f5
+
+    &.one-half
+      width 45%
+
+      @media sm
+        display block
+        width auto
+
+    input
+      display none
+
+    span
+      display block
+      text-align center
+      border 1px solid #d8dbe6
+      color #6e83a0
+      border-radius 40px
+      font-size 16px
+      line-height 38px
+      font-family $fFutura
+      transition all 0.2s ease-in-out
+
+    input:checked + span
+      border 1px solid #5cc6f6
+      background  #5bc6f6
+      color $cWhite
+
+  label.label-radio
+    display inline-block
+    vertical-align top
+    width 28%
+    text-align left
+    cursor pointer
+
+    @media sm
+      box-sizing border-box
+      display block
+      width auto
+      margin 0 15px 15px
+
+    input
+      display none
+
+    .psevdoradio
+      display inline-block
+      vertical-align top
+      width 20px
+      height 20px
+      border-radius 20px
+      position relative
+      border 1px solid #d8dbe6
+      margin-right 15px
+
+    span
+      display inline-block
+      vertical-align top
+      font-size 16px
+      line-height 26px
+      font-family $fFutura
+      color #6e83a0
+
+    input:checked + .psevdoradio
+      border 1px solid #5bc6f6
+      background #5bc6f6
+      box-shadow 0 6px 9px rgba(91,198,246,0.4)
+      position relative
+
+      &:after
+        position absolute
+        content ""
+        background url("../img/sprite-desktop.png") no-repeat -3871px  -2459px
+        width 11px
+        height 8px
+        left 50%
+        top 50%
+        transform translate3d(-5px, -4px, 0)
+        bottom 11px
+
+  .justifyed
+    margin-bottom 50px
+
+    @media sm
+      display block !important
+      margin-bottom 34px
+
+  .inputs
+    padding-top 26px
+    margin-bottom  68px
+
+    @media sm
+      margin-bottom 33px
+
+    label.label-input
+      display inline-block
+      vertical-align top
+      width 24%
+      margin-bottom 0
+
+      @media sm
+        box-sizing border-box
+        display block
+        width auto
+        margin 0 15px 35px
+
+  label.label-input
+    display block
+    width 100%
+    margin-bottom 40px
+    position relative
+
+    &.success
+      &:after
+        position absolute
+        content ""
+        background url("../img/sprite-desktop.png") no-repeat -3882px  -2459px
+        width 11px
+        height 8px
+        right 0
+        bottom 11px
+
+      .inp
+        border-bottom 1px solid #d8dae6
+
+        &:focus
+          border-bottom 1px solid #3cabe2
+
+    &.error
+      &:after
+        position absolute
+        content ""
+        background url("../img/sprite-desktop.png") no-repeat -3806px  -1811px
+        width 8px
+        height 8px
+        right 0
+        bottom 7px
+
+      .inp
+        border-bottom 1px solid #ef094a
+
+      span.error
+        opacity 1
+
+    span.error
+      position absolute
+      left 0
+      right 0
+      top 25px
+      color #ef094a
+      font-size 12px
+      text-align left
+      opacity 0
+
+    .inp
+      display block
+      width 100%
+      height 25px
+      border none
+      outline none
+      box-shadow none
+      border-bottom 1px solid #6e83a0
+      font-size 16px
+      font-family $fFutura
+      color #0d1850
+      transition all 0.2s ease-in-out
+
+      &.error
+        border-bottom 1px solid palevioletred
+
+      &:focus
+        border-bottom 1px solid #3cabe2
+
+      &::placeholder
+        color #6e83a0
+
+      &:focus::placeholder
+        color transparent
+
+.decor-shadow
+    display block
+    width 60%
+    height 10px
+    position relative
+    box-shadow 0 19px 41px rgba(187,197,202,0.97)
+    border-radius 30px
+    margin -12px auto 42px

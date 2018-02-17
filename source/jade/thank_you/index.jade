@@ -1,0 +1,55 @@
+block vars
+    - var title='Title'
+
+extends ../partials/layout-thanks
+
+block content
+    .hidden-block
+        div(id="policy").popup.popup-text.policy
+            h3 Политика конфиденциальности
+            p.fs18 Данное соглашение об&nbsp;обработке персональных данных разработано в&nbsp;соответствии с&nbsp;законодательством Российской Федерации.
+            p.fs18 Все лица заполнившие сведения, составляющие персональные данные на&nbsp;данном сайте, а&nbsp;также разместившие иную информацию обозначенными действиями подтверждают свое согласие на&nbsp;обработку персональных данных и&nbsp;их&nbsp;передачу оператору обработки персональных данных.
+            p.fs18 Под персональными данными Гражданина понимается нижеуказанная информация: общая информация; посетители сайта направляют свои персональные данные.
+            p.fs18 Гражданин, принимая настоящее Соглашение, выражают свою заинтересованность и&nbsp;полное согласие, что обработка их&nbsp;персональных данных может включать в&nbsp;себя следующие действия: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, уничтожение.
+            p.fs18 Гражданин гарантирует: информация, им&nbsp;предоставленная, является полной, точной и&nbsp;достоверной; при предоставлении информации не&nbsp;нарушается действующее законодательство Российской Федерации, законные права и&nbsp;интересы третьих лиц; вся предоставленная информация заполнена Гражданина в&nbsp;отношении себя лично.
+
+
+        div(id="call").popup
+            form(action="https://app.salesap.ru/web_forms/order" method="post").main-form
+
+                input(type="hidden" name='source_id' value='69938')
+                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you')
+                input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
+                input(type="hidden" name='responsible_id' value='10134')
+
+                h2 Заказать обратный звонок
+
+                label.label-input
+                    input(type="text" name="contact[first_name]" placeholder="Имя").inp.required
+                    span.error
+
+                label.label-input
+                    input(type="text" name="contact[mobile_phone]" placeholder="Телефон").inp.required.inp-phone
+                    span.error
+
+                button(type="submit").btn.js--form-submit Отправить
+
+    .thanks-block
+        .width-wrap
+            h2 Спасибо!
+
+            p.fs18 Мы&nbsp;приняли ваше обращение! Обращений очень много, но&nbsp;мы&nbsp;берем не&nbsp;более 4х&nbsp;клиентов в&nbsp;месяц. Если вы&nbsp;хотите ускорить процесс построения системы в&nbsp;вашей компании, заполните опросную форму и&nbsp;мы&nbsp;свяжемся с&nbsp;вами намного быстрее!
+
+            .btns
+                a(href="https://docs.google.com/forms/d/e/1FAIpQLSdO691uYBAZCITuSMcr37EMwV7EX4c4jjE9zmyvdZ9nN8WvNQ/viewform" target="_blank").btn Заполнить опросную форму
+                a(href="http://system.dnk.bz/").btn Вернуться на главную
+
+    .psevdofooter
+
+    footer.footer.inner
+        .width-wrap.justifyed
+            a(href="mailto:system@dnk.bz").footer-mail.fs16.fbook system@dnk.bz
+
+            a(data-fancybox="modal-policy" data-src="#policy" href="javascript:;").fs16.fbook Политика конфиденциальности
+
+            span.fs16.fbook Разработано club.dnk.bz

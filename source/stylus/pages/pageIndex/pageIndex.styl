@@ -1,0 +1,2152 @@
+#loader-wrapper
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100%
+  z-index 1000
+  background rgba(14,18,55,1)
+
+.loaded #loader-wrapper
+  visibility hidden
+  pointer-events none
+  -webkit-transition all .3s 1s ease-out
+  transition all .3s 1s ease-out
+
+.cssload-loader
+  position absolute
+  top 50%
+  left 50%
+  margin -100px 0 0 -100px
+  width 200px
+  height 200px
+  border-radius 50%
+  -o-border-radius 50%
+  -ms-border-radius 50%
+  -webkit-border-radius 50%
+  -moz-border-radius 50%
+  -webkit-perspective 1500px
+  perspective 1500px
+  z-index 1001
+
+.cssload-loader--logo
+  position absolute
+  top 50%
+  left 50%
+  margin 80px 0 0 -75px
+  width 150px
+  text-align center
+
+  &-img
+    display inline-block
+    vertical-align top
+    sprite($logo_header)
+    margin-right 17px
+    width 72px
+    zoom 0.7
+
+  span
+    display inline-block
+    vertical-align top
+    font-family $fFutura
+    padding-top 15px
+    font-size 16px
+    line-height 20px
+
+    @media sm
+      font-size 13px
+      line-height normal
+      padding-top 2px
+      display none
+
+
+.loaded .cssload-loader
+  opacity 0
+  -webkit-transition all .3s ease-out
+  transition all .3s ease-out
+
+.cssload-inner.cssload-one
+  left 0
+  top 0
+  animation cssload-rotate-one 1.45s linear infinite
+  -o-animation cssload-rotate-one 1.45s linear infinite
+  -ms-animation cssload-rotate-one 1.45s linear infinite
+  -webkit-animation cssload-rotate-one 1.45s linear infinite
+  -moz-animation cssload-rotate-one 1.45s linear infinite
+  border-bottom 7px solid #fff
+
+.cssload-inner
+  position absolute
+  width 100%
+  height 100%
+  box-sizing border-box
+  -o-box-sizing border-box
+  -ms-box-sizing border-box
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  border-radius 50%
+  -o-border-radius 50%
+  -ms-border-radius 50%
+  -webkit-border-radius 50%
+  -moz-border-radius 50%
+
+.cssload-inner.cssload-two
+  right 0
+  top 0
+  animation cssload-rotate-two 1.45s linear infinite
+  -o-animation cssload-rotate-two 1.45s linear infinite
+  -ms-animation cssload-rotate-two 1.45s linear infinite
+  -webkit-animation cssload-rotate-two 1.45s linear infinite
+  -moz-animation cssload-rotate-two 1.45s linear infinite
+  border-right 7px solid #fff
+
+.cssload-inner
+  position absolute
+  width 100%
+  height 100%
+  box-sizing border-box
+  -o-box-sizing border-box
+  -ms-box-sizing border-box
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  border-radius 50%
+  -o-border-radius 50%
+  -ms-border-radius 50%
+  -webkit-border-radius 50%
+  -moz-border-radius 50%
+
+.cssload-inner.cssload-three
+  right 0
+  bottom 0
+  animation cssload-rotate-three 1.45s linear infinite
+  -o-animation cssload-rotate-three 1.45s linear infinite
+  -ms-animation cssload-rotate-three 1.45s linear infinite
+  -webkit-animation cssload-rotate-three 1.45s linear infinite
+  -moz-animation cssload-rotate-three 1.45s linear infinite
+  border-top 7px solid #fff
+
+.start
+  padding-top 108px
+  padding-bottom 94px
+  text-align center
+
+  @media sm
+    padding-top 127px
+
+  h2
+    margin-bottom 20px
+
+  h3
+    margin-bottom 60px
+
+    @media sm
+      margin-bottom 30px
+
+    i
+      font-size 30px
+
+  &-video
+    display inline-block
+    vertical-align top
+    position relative
+    margin 0 auto 50px
+
+    img
+      display block
+      max-width 100%
+
+    &:after
+      position absolute
+      content ""
+      left 50%
+      top 50%
+      transform translate3d(-50%, -50%, 0)
+      sprite($icon_video)
+
+      @media sm
+        background url("../img/sprite-mobile.png") no-repeat -633px -6748px
+        width 125px
+        height 127px
+
+  &-list
+    li
+      display inline-block
+      vertical-align top
+      width 28%
+
+      @media sm
+        display block
+        width 100%
+        margin-bottom 20px
+
+      a
+        display flex
+        align-items center
+        justify-content center
+        min-height 93px
+        padding 5px 22px 8px
+        border 1px solid rgba(255, 255, 255, 0.25)
+        border-radius 10px
+
+        @media sm
+          padding 5px 10px 8px !important
+          min-height 10px
+
+.promo
+  padding-top 108px
+  padding-bottom 94px
+  position relative
+  z-index 10
+
+  @media sm
+    padding-top 127px
+
+  &-circle
+    position relative
+    display flex
+    align-items center
+    align-content center
+    margin 0 auto
+    width 380px
+    height 573px
+
+    @media sm
+      width 230px
+      height 270px
+      margin-bottom 67px
+
+    &:after
+      position absolute
+      content ""
+      z-index 1
+      sprite($img_wire_1)
+      top 205px
+      transform translateX(-970px)
+      left 50%
+
+      @media sm
+        top 80px
+        background url("../img/sprite-mobile.png") no-repeat -474px -4647px
+        width 260px
+        height 71px
+        transform translateX(-380px)
+
+    &:before
+      position absolute
+      content ""
+      z-index 1
+      sprite($img_wire_2)
+      top 165px
+      transform translateX(230px)
+      left 50%
+
+      @media sm
+        top 79px
+        transform translateX(124px)
+        background url("../img/sprite-mobile.png") no-repeat -429px -5248px
+        width 256px
+        height 83px
+
+    &-bg
+      z-index 5
+      position absolute
+      left 50%
+      top 50%
+      transform translate3d(-49%, -50%, 0)
+      sprite($img_circle)
+      display block
+      margin 0 auto
+      text-align center
+
+      @media sm
+        transform translate3d(-50%, -50%, 0)
+        background url("../img/sprite-mobile.png") no-repeat -439px -4800px
+        width 319px
+        height 329px
+
+    .content
+      position relative
+      z-index 10
+      display block
+      width 380px
+      margin-top -9px
+
+      @media sm
+        width 100%
+
+      h2
+        display block
+        margin-bottom 26px
+
+        @media sm
+          margin-bottom 17px
+
+        i
+          @media sm
+            display inline
+
+      p
+        display block
+        text-align center
+
+  &-list
+    padding-top 1px
+    margin-top -36px
+    position relative
+    text-align center
+    margin-bottom 50px
+
+    @media sm
+      margin-bottom 30px
+
+    &:before,
+    &:after
+      position absolute
+      content ""
+      sprite($decor_center)
+      top -132px
+      left 50%
+
+      @media sm
+        background none
+        display none
+
+    &:before
+      transform translateX(-965px)
+    &:after
+      transform translateX(330px) scale(-1, 1)
+
+    li
+      display inline-block
+      vertical-align top
+      text-align center
+      width 170px
+      margin 0 54px
+
+      @media md
+        margin 0 40px
+
+      @media sm
+        margin 0
+        width 95px
+
+      &:nth-child(1),
+      &:nth-child(3)
+        margin-top -155px
+
+        @media sm
+          margin-top -44px
+
+      span
+        display block
+        font-size 30px
+        text-align center
+        margin-bottom 6px
+
+        @media sm
+          font-size 20px
+
+      p
+        display block
+        text-align center
+        font-family $fFutura_m
+
+        @media sm
+          font-size 12px
+          line-height 18px
+
+.chaos
+  position relative
+  padding-bottom 20px
+
+  @media sm
+    padding-bottom 15px
+
+  &-bg
+    position absolute
+    content ""
+    sprite($bg_whirpool)
+    left 50%
+    top 50%
+    transform translate3d(-50%, -59%, 0)
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat 0 0
+      width 760px
+      height 1530px
+
+  .content
+    margin-left 480px
+    margin-bottom 167px
+    position relative
+    z-index 10
+
+    @media sm
+      margin-left 48px
+      margin-bottom 253px
+
+    p
+      margin-bottom 135px
+      line-height 33px
+
+      @media sm
+        line-height 24px
+        margin-bottom 18px
+
+    h2
+      text-align left
+
+  &-percent
+    align-items center
+    align-content center
+    margin-bottom 47px
+
+    @media md
+      flex-flow nowrap
+    @media sm
+      flex-flow wrap
+      margin-bottom 28px
+
+    h2
+      display inline-block
+      vertical-align top
+      text-align left
+      margin-top -29px
+
+      @media sm
+        display block
+        text-align center
+        width 100%
+
+      &:first-child
+        @media sm
+          margin-bottom 0
+
+        i
+          @media sm
+            display inline
+
+    &-img
+      display inline-block
+      vertical-align top
+      position relative
+      margin-left -19px
+      transform scale(0.8)
+
+      @media sm
+        transform scale(1)
+        margin-left 0
+        text-align center
+        width 100%
+        margin-bottom 20px
+
+      .img
+        sprite($img_95)
+        position relative
+        z-index 5
+        display block
+
+        @media sm
+          margin 0 auto
+          background url("../img/sprite-mobile.png") no-repeat -489px -7235px
+          width 184px
+          height 115px
+
+      &:before
+        position absolute
+        content ""
+        sprite($img_wire_3)
+        left -121px
+        top -858px
+        z-index 0
+
+        @media sm
+          zoom 1
+          width 336px
+          height 692px
+          left 50%
+          top -632px
+          margin-left -190px
+          background url(../img/sprite-mobile.png) no-repeat 0 0
+          background-position -0px -5922px
+
+  &-list
+    li
+      display inline-block
+      vertical-align top
+      width 24%
+      margin-bottom 65px
+      position relative
+      padding-left 23px
+
+      @media sm
+        display block
+        width 100%
+        margin-bottom 18px
+        padding-left 18px
+
+      &:before
+        position absolute
+        content ""
+        width 10px
+        height 1px
+        background $cWhite
+        left 0
+        top 15px
+
+        @media sm
+          top 12px
+
+.expert
+  position relative
+  padding-bottom 28px
+
+  &-bg
+    position absolute
+    content ""
+    left 50%
+    top -110px
+    sprite($bg_glare)
+    transform translateX(-50%)
+    z-index 1
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat 0px -2012px
+      width 750px
+      height 285px
+      top -76px
+
+  &-arrow
+    position relative
+    margin-bottom 55px
+    z-index 10
+
+    @media sm
+      margin-bottom 45px
+
+    .img
+      display block
+      margin 0 auto
+      sprite($decor_arrows)
+      transform translateX(-15px)
+      position relative
+      z-index 10
+
+      @media sm
+        background url("../img/sprite-mobile.png") no-repeat -471px -7350px
+        width 171px
+        height 113px
+        transform translateX(-6px)
+
+    &:before,
+    &:after
+      position absolute
+      content ""
+      z-index 2
+      left 50%
+
+    &:before
+      top -82px
+      sprite($img_wire_4)
+      transform translateX(-962px)
+
+      @media sm
+        background url("../img/sprite-mobile.png") no-repeat -395px -5336px
+        width 355px
+        height 122px
+        top 66px
+        transform translateX(-386px)
+
+    &:after
+      top -96px
+      sprite($img_wire_5)
+      transform translateX(56px)
+
+      @media sm
+        background url("../img/sprite-mobile.png") no-repeat -391px -5684px
+        width 341px
+        height 168px
+        transform translateX(33px)
+        top -4px
+
+  h2
+    margin-bottom 18px
+
+    @media sm
+      margin-bottom 7px
+
+  p
+    margin-bottom 140px
+
+    @media sm
+      margin-bottom 0
+
+  &-list
+    &--el
+      display block
+      margin-bottom -65px
+      position relative
+      white-space nowrap
+
+      @media sm
+        white-space normal
+        margin-bottom 54px
+
+      &:nth-child(3)
+        margin-bottom -102px
+
+        @media sm
+          margin-bottom 40px
+
+      &:nth-child(2)
+        margin-bottom 147px
+
+        @media sm
+          margin-bottom 133px
+
+        .content
+          width 60%
+
+          @media sm
+            width 100%
+
+        a
+          position absolute
+          right 0
+          top 0
+
+          @media sm
+            position relative
+
+    a
+      display inline-block
+      vertical-align top
+      width 50%
+      position relative
+
+      @media md
+        transform scale(0.8)
+
+      @media sm
+        transform scale(1)
+        display flex
+        align-content center
+        align-items center
+        justify-content center
+        width 100%
+
+      &:after
+        position absolute
+        content ""
+        sprite($icon_video)
+        left 50%
+        top 50%
+        transform translate3d(-53%, -92%, 0)
+
+        @media md
+          transform translate3d(-30%, -92%, 0)
+
+        @media sm
+          background url("../img/sprite-mobile.png") no-repeat -633px -6748px
+          width 125px
+          height 127px
+          transform translate3d(-50%, -57%, 0)
+
+      &.michail
+        @media sm
+          margin-bottom -108px
+
+        .img
+          sprite($img_michail)
+          transform translate3D(-6px, -86px, 0)
+
+          @media sm
+            background url("../img/sprite-mobile.png") no-repeat -0px -6614px
+            width 323px
+            height 429px
+            transform translate3D(-15px, 0, 0)
+
+      &.ilia
+        @media sm
+          margin-bottom 15px
+
+        &:after
+          @media sm
+            transform translate3d(-50%, -22%, 0)
+
+        .img
+          sprite($mg_ilia)
+          transform translate3D(-47px, -119px, 0)
+
+          @media sm
+            background url("../img/sprite-mobile.png") no-repeat -0px -5641px
+            width 391px
+            height 281px
+            transform translate3D(-52px, 0, 0)
+
+      &.igor
+        @media sm
+          margin-bottom -137px
+
+        a:after
+          @media sm
+            transform translate3d(-54%, -116%, 0)
+
+        .img
+          sprite($img_igor)
+          transform translate3D(4px, -87px, 0)
+
+          @media sm
+            background url("../img/sprite-mobile.png") no-repeat -323px -6748px
+            width 310px
+            height 375px
+
+    .content
+      display inline-block
+      vertical-align top
+      width 54%
+      white-space normal
+
+      @media sm
+        display block
+        width 100%
+
+      span.name
+        display block
+        margin-bottom 20px
+        font-family $fFutura_m
+        font-size 24px
+        line-height 30px
+
+        @media sm
+          font-size 18px
+          line-height 30px
+          text-align center
+          margin-bottom 10px
+          width 100%
+          margin-bottom 13px
+
+      ul
+        margin-left -7px
+
+        @media sm
+          width 100%
+
+        li
+          display block
+          margin-bottom 0
+          line-height 36px
+          position relative
+          padding-left 16px
+
+          @media sm
+            width 100%
+            line-height 22px
+            margin-bottom 7px
+            padding-left 22px
+
+          &:last-child
+            margin-bottom 0
+
+          &:before
+            position absolute
+            content ""
+            width 11px
+            height 1px
+            background $cWhite
+            left 0
+            top 19px
+
+            @media sm
+              left 7px
+              top 13px
+
+  &-text
+    @media md
+      flex-flow nowrap
+
+    @media sm
+      flex-flow wrap
+
+    &-number
+      display inline-block
+      vertical-align top
+      sprite($img_150)
+      margin-left -36px
+
+      @media md
+        transform scale(0.8)
+
+      @media sm
+        transform scale(1)
+        background url("../img/sprite-mobile.png") no-repeat -489px -7123px
+        width 200px
+        height 112px
+        display block
+        margin 0 auto -13px
+
+    .content
+      display inline-block
+      vertical-align top
+      width 525px
+      padding-top 31px
+
+      @media md
+        width 330px
+
+      @media sm
+        width 100%
+        display block
+        text-align center
+        padding-top 0
+
+      h3
+        text-align left
+        font-size 30px
+        line-height 40px
+        margin-bottom 18px
+
+        @media sm
+          text-align center
+          font-size 24px
+          line-height 30px
+          margin-bottom 12px
+
+        i
+          @media sm
+            display inline
+
+      span
+        display block
+        padding-left 30px
+        position relative
+
+        @media sm
+          display inline-block
+          vertical-align top
+
+        &:before
+          position absolute
+          content ""
+          left 0
+          top 7px
+          sprite($icon_person)
+
+          @media sm
+            left -3px
+            top 4px
+            background url("../img/sprite-mobile.png") no-repeat -734px -4681px
+            width 17px
+            height 16px
+
+.form
+  position relative
+  margin-bottom 212px
+
+  @media sm
+    margin-bottom 85px
+
+  &.form-footer
+    margin-bottom 0
+    position relative
+
+    .form-bg
+      transform translate3d(-49%, -27%, 0)
+
+    &:before
+      position absolute
+      content ""
+      sprite($img_wire_14)
+      left 50%
+      transform translateX(-961px)
+      top -230px
+
+      @media sm
+        background url("../img/sprite-mobile.png") no-repeat 0px -4647px
+        width 474px
+        height 153px
+        transform translateX(-380px)
+      top -184px
+
+  &-bg
+    position absolute
+    sprite($bg_glare_2)
+    left 50%
+    top 50%
+    transform translate3d(-50%, -18%, 0)
+    z-index 0
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat -0px -1530px
+      width 750px
+      height 482px
+
+  .width-wrap
+    position relative
+    z-index 5
+
+  &-wire
+    position relative
+    height 173px
+    margin-bottom 60px
+
+    @media sm
+      height 47px
+
+    &:before
+      position absolute
+      content ""
+      sprite($img_wire_6)
+      top 0
+      left 50%
+      transform translateX(-110px)
+
+      @media sm
+        background url("../img/sprite-mobile.png") no-repeat -0px -4800px
+        width 439px
+        height 219px
+        top -140px
+        transform translateX(-60px)
+
+  h2
+    margin-bottom 108px
+
+    @media sm
+      margin-bottom 22px
+
+.podium
+  padding-bottom 172px
+
+  @media sm
+    padding-bottom 71px
+
+  &-percent
+    align-items center
+    align-content center
+    margin-bottom 80px
+
+    @media md
+      flex-flow nowrap
+    @media sm
+      flex-flow wrap
+      justify-content center
+      margin-bottom 41px
+
+    h2
+      display inline-block
+      vertical-align top
+      text-align left
+      margin-top -29px
+      position relative
+      z-index 10
+
+      &:nth-child(1)
+        margin-left 44px
+
+        @media sm
+          display block
+          text-align center
+          margin-left 0
+          width 100%
+          margin-bottom 11px
+
+        i
+          @media sm
+            display inline
+
+      &:nth-child(3)
+        margin-right 99px
+
+        @media sm
+          margin-right 0
+          width 50%
+          padding-left 8%
+          box-sizing border-box
+          margin-top -8px
+
+        i
+          @media sm
+            display inline
+
+    &-img
+      display inline-block
+      vertical-align top
+      position relative
+      z-index 5
+
+      @media md
+        transform scale(0.7)
+
+      @media sm
+        transform scale(1)
+        width 50%
+        text-align center
+
+      .img
+        sprite($img_3)
+        position relative
+        z-index 5
+        display block
+
+        @media sm
+          background url("../img/sprite-mobile.png") no-repeat -633px -6875px
+          width 108px
+          height 157px
+          margin 0 auto
+          transform translateX(19px)
+
+      &:before
+        position absolute
+        content ""
+        sprite($img_wire_7)
+        transform translateX(-965px)
+        left 50%
+        top 93px
+        z-index 0
+        pointer-events none
+
+        @media sm
+          background url("../img/sprite-mobile.png") no-repeat -336px -6103px
+          width 328px
+          height 645px
+          top -479px
+          transform translateX(-308px)
+
+  &-list
+    position relative
+    margin 0 76px 239px
+
+    @media md
+      margin 0 0 239px
+
+    @media sm
+      margin 0 auto 19px
+
+    &:after
+      position absolute
+      content ""
+      sprite($bg_steps)
+      transform translateX(-44%)
+      left 50%
+      bottom -249px
+      z-index 0
+
+      @media sm
+        display none
+        background transparent
+
+    li
+      display inline-block
+      vertical-align top
+      padding-left 16px
+      width 250px
+      position relative
+      z-index 10
+
+      @media md
+        width 30%
+
+      @media sm
+        width 100%
+        display block
+        margin-bottom 35px
+        padding-right 0
+        margin-bottom 42px
+
+      &:nth-child(1)
+        margin-top 60px
+
+        @media sm
+          margin-top 0
+
+      &:nth-child(2)
+        margin-top 40px
+
+        @media sm
+          margin-top 0
+
+      &:before
+        position absolute
+        content ""
+        width 11px
+        height 1px
+        background $cWhite
+        left 0
+        top 11px
+
+  h2
+    i
+      @media sm
+        display inline
+
+.steps
+  padding 104px 0 9px
+  background $cWhite
+
+  @media sm
+    padding 36px 0 9px
+
+  *
+    color #0c1337
+
+  h2
+    margin-bottom 58px
+
+    i
+      @media sm
+        display inline
+
+  &-list
+    &--el
+      display block
+      margin-bottom 35px
+
+      &:last-child
+        @media sm
+          margin-bottom 15px
+
+      .hidden-content
+        display none
+
+      .number
+        display inline-flex
+        vertical-align top
+        align-content center
+        align-items center
+        justify-content center
+        flex-flow wrap
+        width 70px
+        height 70px
+        border-radius 70px
+        position relative
+        background #44c0e8
+        box-shadow inset 0 0 50px rgba(255, 255, 255, 0.4)
+        margin-right 19px
+
+        @media sm
+          display flex
+          margin 0 auto 2px
+
+        span
+          font-size 20px
+          font-family $fFutura_m
+          color $cWhite
+          text-shadow 1px 0 0 #2d94c6
+          text-align center
+          text-transform uppercase
+
+          i
+            font-size 12px
+            color $cWhite
+            display block
+            font-family $fFutura
+            margin-top -10px
+
+            @media sm
+              margin-top 0
+
+        &:after
+          position absolute
+          content ""
+          left 0
+          top 0
+          right 0
+          bottom 0
+          border-radius 70px
+          background url("../img/bg--noise.png") repeat
+          opacity 0.4
+
+      .content
+        display inline-block
+        vertical-align top
+        width 730px
+        padding-top 11px
+
+        @media md
+          width 660px
+
+        @media sm
+          width 100%
+
+        span
+          display block
+
+          &.fbook
+            letter-spacing 0
+            margin-bottom 5px
+
+            @media sm
+              display block
+              text-align center
+              font-size 18px
+              line-height 22px
+              margin-bottom 25px
+
+            .icon
+              display inline-block
+              vertical-align top
+              sprite($icon_arrow2)
+              margin 15px 10px 0
+
+              @media sm
+                background url("../img/sprite-mobile.png") no-repeat -734px -4697px
+                width 16px
+                height 5px
+
+            i
+              display inline
+              font-style italic
+              font-size 16px
+
+          &.fs16
+            margin-bottom 18px
+
+            @media sm
+              font-size 16px
+              line-height 24px
+              text-align left
+              margin-bottom 4px
+
+          &.fs12
+            text-transform uppercase
+            margin-bottom 0
+
+            @media ms
+              line-height 47px
+
+          &.fs14
+            text-transform uppercase
+            margin-bottom 0
+
+        p
+          &.fs16
+            margin-bottom 18px
+
+            @media sm
+              margin-bottom 12px
+
+        ul
+          li
+            display block
+            position relative
+            padding-left 20px
+            font-size 16px
+            line-height 26px
+            font-family $fFutura
+            margin-bottom 12px
+
+            @media sm
+              line-height 24px
+              margin-bottom 15px
+
+            &:before
+              position absolute
+              content ""
+              width 11px
+              height 1px
+              background #0c1337
+              left 4px
+              top 13px
+
+        .link
+          display inline-block
+          vertical-align top
+          text-align center
+          border 1px solid #d8dbe6
+          color #6e83a0
+          border-radius 40px
+          font-size 16px
+          line-height 28px
+          font-family $fFutura
+          position relative
+          margin 5px 0 15px
+          padding 9px 21px 8px 53px
+          transition all 0.2s ease-in-out
+
+          @media sm
+            display block
+            max-width 100%
+            margin 27px 0 15px
+
+          &:hover
+            background #3cabe2
+            color $cWhite
+
+            &:before
+              sprite($icon_download_white)
+
+              @media sm
+                background url("../img/sprite-mobile.png") no-repeat -734px -4647px
+
+          &:before
+            position absolute
+            content ""
+            sprite($icon_download)
+            left 24px
+            top 50%
+            margin-top -9px
+
+            @media sm
+              background url("../img/sprite-mobile.png") no-repeat -734px -4664px
+              width 17px
+              height 17px
+
+        .more
+          display inline-block
+          vertical-align top
+          color #1fa2d9
+          text-decoration underline
+          transition all 0.2s ease-in-out
+
+          &:hover
+            color #1c8cba
+
+.result
+  padding 151px 0 145px
+  text-align center
+  position relative
+
+  @media sm
+    padding 40px 0 81px
+
+  &:after,
+  &:before
+    position absolute
+    content ""
+    bottom 50px
+    left 50%
+
+  &:before
+    sprite($img_wire_8)
+    transform translateX(-961px)
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat -395px -5582px
+      width 343px
+      height 102px
+      transform translateX(-385px)
+      bottom 29px
+
+  &:after
+    bottom 58px
+    sprite($img_wire_9)
+    transform translateX(53px)
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat -395px -5458px
+      width 349px
+      height 124px
+      transform translateX(31px)
+      bottom 37px
+
+  &-bg
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    top 252px
+    sprite($bg_glare)
+    z-index 0
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat 0px -2012px
+      width 750px
+      height 285px
+      top 200px
+
+  .width-wrap
+    position relative
+    z-index 5
+
+  h2
+    margin-bottom 40px
+
+    @media sm
+      font-size 24px
+      line-height 30px
+      margin-bottom 25px
+
+    i
+      @media sm
+        display inline
+
+  &-img
+    position relative
+    display inline-block
+    vertical-align top
+    margin-bottom -2px
+
+    @media sm
+      margin-bottom 7px
+
+    .img
+      sprite($img_conveer)
+      transform translateX(-167px)
+
+      @media sm
+        background url("../img/sprite-mobile.png") no-repeat 0px -5019px
+        width 429px
+        height 317px
+
+  &-title
+    display inline-block
+    vertical-align top
+    sprite($img_conveer_title)
+    margin-bottom -54px
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat -429px -5129px
+      width 300px
+      height 119px
+      margin-bottom -29px
+
+  &-list
+    margin-bottom 40px
+    padding-top 22px
+
+    @media sm
+      margin-bottom 10px
+
+    li
+      display inline-block
+      vertical-align top
+      width 24%
+      margin-bottom 39px
+      position relative
+      padding-left 23px
+      text-align left
+
+      @media sm
+        display block
+        width 100%
+        margin-bottom 21px
+
+      &:before
+        position absolute
+        content ""
+        width 10px
+        height 1px
+        background $cWhite
+        left 0
+        top 15px
+
+        @media sm
+          left 5px
+          top 13px
+
+.reason
+  position relative
+  padding 50px 0 137px
+
+  @media sm
+    padding 0px 0 40px
+
+  &-bg
+    position absolute
+    sprite($bg_whirpool_2)
+    bottom -443px
+    left 50%
+    transform translateX(-50%)
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat -0px -2297px
+      width 750px
+      height 676px
+      bottom -83px
+
+  h3
+    font-size 30px
+    line-height 40px
+    margin-bottom 65px
+
+    @media sm
+      font-size 24px
+      line-height 30px
+      margin-bottom 27px
+
+    i
+      @media sm
+        display inline
+
+  &-table
+    position relative
+    margin-bottom 81px
+
+    @media sm
+      margin-bottom -10px
+
+    &:after
+      position absolute
+      content ""
+      background linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 100%)
+      top -50px
+      bottom -50px
+      left 300px
+      width 1px
+
+      @media sm
+        display none
+
+    li
+      display block
+      margin-bottom 47px
+      position relative
+
+      &:after
+        position absolute
+        content ""
+        bottom -21px
+        background linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 100%)
+        left 0
+        right 0
+        height 1px
+
+      &:last-child
+        &:after
+          display none
+
+      p
+        display inline-block
+        vertical-align top
+
+        @media sm
+          box-sizing border-box
+
+        &:nth-child(1)
+          box-sizing border-box
+          width 370px
+          padding-right 125px
+          padding-left 26px
+
+          @media md
+            width 325px
+            padding-right 25px
+
+          @media sm
+            display block
+            width 100%
+            padding-left 21px
+            margin-bottom 17px
+            padding-right 0
+
+          &:before
+            position absolute
+            content ""
+            width 10px
+            height 1px
+            background $cWhite
+            left 5px
+            top 13px
+
+            @media sm
+              left 2px
+              top 11px
+
+        &:nth-child(2)
+          width 560px
+
+          @media md
+            width 360px
+
+          @media sm
+            display block
+            width 100%
+            padding-left 21px
+
+  &-percent
+    align-items center
+    align-content center
+    margin-bottom 47px
+
+    @media md
+      flex-flow nowrap
+    @media sm
+      flex-flow wrap
+
+    h2
+      display inline-block
+      vertical-align top
+      text-align left
+      margin-top -29px
+      position relative
+      z-index 5
+
+      &:last-child
+        margin-right 75px
+
+        @media sm
+          margin 0 auto
+
+      @media sm
+        display block
+        text-align center
+        width 100%
+        margin 0 auto 30px
+
+    &-img
+      display inline-block
+      vertical-align top
+      position relative
+      margin-left -17px
+
+      @media md
+        transform scale(0.8)
+
+      @media sm
+        transform scale(1)
+        display block
+        text-align center
+        width 100%
+        margin 0 auto
+
+      .img
+        sprite($img_95)
+        position relative
+        z-index 5
+        display block
+
+        @media sm
+          background url("../img/sprite-mobile.png") no-repeat -489px -7235px
+          width 184px
+          height 115px
+          margin 0 auto
+
+      &:before
+        position absolute
+        content ""
+        sprite($img_wire_10)
+        left 50%
+        bottom -54px
+        transform translateX(149px)
+        z-index 0
+
+        @media sm
+          background url("../img/sprite-mobile.png") no-repeat -391px -5852px
+          width 338px
+          height 251px
+          bottom -73px
+          transform translateX(28px)
+
+.recommendation
+  background $cWhite
+  padding 130px 0 150px
+  text-align center
+  position relative
+  z-index 10
+
+  @media sm
+    padding 50px 0 61px
+
+  h2
+    margin-bottom 43px
+    color #0c1337
+
+    i
+      @media sm
+        display inline
+        margin-bottom 32px
+
+  &-video
+    display inline-block
+    vertical-align top
+    position relative
+    width 560px
+    height 315px
+
+    @media sm
+      width 100%
+      height 52vw
+
+    iframe
+      display block
+      width 560px
+      height 315px
+
+      @media sm
+        width 100%
+        height 100%
+
+    //&:after
+    //  position absolute
+    //  content ""
+    //  left 50%
+    //  top 50%
+    //  transform translate3d(-50%, -50%, 0)
+    //  sprite($icon_video)
+    //
+    //  @media sm
+    //    background url("../img/sprite-mobile.png") no-repeat -633px -6748px
+    //    width 125px
+    //    height 127px
+
+.free
+  position relative
+  padding 227px 0 41px
+
+  @media sm
+    padding 85px 0 41px
+
+  &-bg
+    position absolute
+    content ""
+    sprite($bg_glare_2)
+    left 50%
+    top 50%
+    transform translate3d(-52%, -30%, 0)
+    z-index 0
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat -0px -1530px
+      width 750px
+      height 482px
+      top 150px
+
+  .width-wrap
+    position relative
+    z-index 10
+
+  .main-form
+    padding 77px 70px 53px
+
+    @media sm
+      padding 44px 25px 40px
+
+    h2
+      color #0c1752
+      margin-bottom 25px
+
+      @media sm
+        margin-bottom 22px
+
+    p
+      color #0c1752
+      display block
+      text-align center
+      margin-bottom 37px
+      font-size 22px
+      line-height 33px
+
+      @media sm
+        font-size 18px
+        line-height 26px
+        margin-bottom 11px
+
+    span.form-notification
+      display block
+      text-align center
+      margin-bottom 30px
+      color #6e83a0
+
+      @media sm
+        font-size 16px
+        line-height 30px
+        margin-bottom 7px
+
+    .inputs
+      text-align center
+      margin-bottom 51px
+
+      label
+        width 175px
+        margin 0 10px
+
+        @media sm
+          margin 0 auto 20px
+
+    .btn
+      padding 17px 65px 20px
+
+.solution
+  position relative
+  padding 50px 0 323px
+
+  @media sm
+    padding 21px 0 168px
+
+  &-bg
+    position absolute
+    sprite($bg_glare)
+    bottom -20px
+    left 50%
+    transform translateX(-50%)
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat 0px -2012px
+      width 750px
+      height 285px
+      top -76px
+
+  &:after
+    position absolute
+    content ""
+    left 50%
+    bottom -293px
+    sprite($img_wire_11)
+    transform translateX(-311px)
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat 0px -5336px
+      width 395px
+      height 305px
+      bottom -80px
+      transform translateX(-115px)
+
+  h2
+    margin-bottom 44px
+
+    @media sm
+      margin-bottom 24px
+
+  &-img
+    display block
+    margin 0 auto 36px
+    sprite($icon_stop)
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat -289px -7123px
+      width 200px
+      height 208px
+      margin 0 auto 1px
+
+  &-list
+    padding-bottom 59px
+
+    @media sm
+      padding-bottom 8px
+
+    li
+      display inline-block
+      vertical-align top
+      width 24%
+      margin-bottom 27px
+      position relative
+      padding-left 23px
+
+      @media sm
+        display block
+        width 100%
+        margin-bottom 19px
+        padding-left 18px
+
+      &:before
+        position absolute
+        content ""
+        width 10px
+        height 1px
+        background $cWhite
+        left 0
+        top 15px
+
+        @media sm
+          top 11px
+
+.confidence
+  padding-bottom 36px
+  position relative
+  z-index 10
+
+  @media sm
+    padding-bottom 0
+
+  .content
+    width 480px
+    margin-bottom -49px
+
+    @media sm
+      width 100%
+
+    h2
+      text-align left
+      margin-bottom 25px
+
+      @media sm
+        margin-bottom 12px
+        padding-right 50px
+
+  &-img
+    @media sm
+      margin-bottom 12px
+
+    li
+      display inline-block
+      vertical-align top
+      margin 0 -43px
+
+      @media sm
+        margin 0 -22px
+
+      &:nth-child(1)
+        sprite($img_person_1)
+
+        @media sm
+          background url("../img/sprite-mobile.png") no-repeat -0px -7480px
+          width 128px
+          height 140px
+
+      &:nth-child(2)
+        sprite($img_person_2)
+
+        @media sm
+          background url("../img/sprite-mobile.png") no-repeat -612px -7463px
+          width 138px
+          height 147px
+
+      &:nth-child(3)
+        sprite($img_person_3)
+
+        @media sm
+          background url("../img/sprite-mobile.png") no-repeat -471px -7463px
+          width 141px
+          height 108px
+
+  &-list
+    padding-bottom 27px
+
+    @media sm
+      padding-bottom 15px
+
+    li
+      display inline-block
+      vertical-align top
+      width 30%
+      margin-bottom 36px
+      position relative
+      padding-left 23px
+      box-sizing border-box
+
+      @media sm
+        display block
+        width 100%
+        margin-bottom 19px
+        padding-left 16px
+
+      &:before
+        position absolute
+        content ""
+        width 10px
+        height 1px
+        background $cWhite
+        left 0
+        top 15px
+
+        @media sm
+          top 11px
+
+.price
+  position relative
+  padding-bottom 274px
+
+  @media sm
+    padding-bottom 158px
+
+  &-arrows
+    display block
+    margin 0 auto 37px
+    sprite($decor_arrows3)
+    z-index 5
+    transform translateX(-15px)
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat -289px -7331px
+      width 182px
+      height 154px
+      margin-bottom -1px
+
+  &-bg
+    position absolute
+    sprite($bg_whirpool_3)
+    top 50%
+    left 50%
+    transform translate3d(-50%, -50%, 0)
+
+    @media sm
+      background url("../img/sprite-mobile.png") no-repeat 0px -2973px
+      width 750px
+      height 967px
+      bottom 30px
+
+  &:before,
+  &:after
+    position absolute
+    content ""
+    z-index 2
+    left 50%
+
+  &:before
+    top 365px
+    sprite($img_wire_12)
+    transform translateX(-962px)
+
+    @media md
+      transform translateX(-932px)
+
+    @media sm
+      display none
+      background none
+
+  &:after
+    top 614px
+    sprite($img_wire_13)
+    transform translateX(387px)
+
+    @media md
+      transform translateX(357px)
+
+    @media sm
+      display none
+      background none
+
+  .content
+    width 800px
+    background $cWhite
+    display block
+    margin 0 auto
+    padding 55px 75px 26px
+    text-align center
+    box-sizing border-box
+    position relative
+    z-index 10
+
+    @media md
+      width 100%
+      padding 45px 55px 26px
+
+    @media sm
+      padding 36px 19px 26px
+
+    *
+      color #0c1752
+
+    h2
+      margin-bottom 47px
+
+      @media sm
+        margin-bottom 27px
+
+    .decor-shadow
+      margin-bottom 40px
+
+    .justifyed
+      margin-bottom 9px
+
+      @media sm
+        display block
+        margin-bottom 15px
+
+      span.fbook
+        @media sm
+          display block
+          font-size 18px
+          line-height 24px
+          text-align left
+
+      span.fmedium
+        @media sm
+          display block
+          font-size 24px
+          line-height 30px
+          text-align left
+
+        &.fs12
+          @media sm
+            font-size 12px
+            line-height 18px
+
+    span.fs12
+      display block
+      margin-bottom -2px
+      text-transform uppercase
+      text-align left
+
+    ul
+      li
+        display block
+        margin-bottom 15px
+        position relative
+        padding-left 17px
+        opacity 0.7
+        text-align left
+        color #0c1752
+
+        &:before
+          position absolute
+          content ""
+          width 10px
+          height 1px
+          background #0c1752
+          left 0
+          top 11px
+
+    p.fs16
+      opacity 0.7
+      margin-bottom 44px
+      text-align left
+
+@keyframes cssload-rotate-one  
+  0%
+    -webkit-transform rotateX(35deg) rotateY(-45deg) rotateZ(0)
+    transform rotateX(35deg)  rotateY(-45deg) rotateZ(0)
+ 
+  100%
+    -webkit-transform rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+    transform rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+ 
+@-webkit-keyframes cssload-rotate-one
+  0%
+    -webkit-transform rotateX(35deg) rotateY(-45deg) rotateZ(0)
+    transform rotateX(35deg)  rotateY(-45deg) rotateZ(0)
+
+  100%
+    -webkit-transform rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+    transform rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+ 
+@keyframes cssload-rotate-two
+  0%
+    -webkit-transform rotateX(50deg) rotateY(10deg) rotateZ(0)
+
+  100%
+    -webkit-transform rotateX(50deg) rotateY(10deg)    rotateZ(360deg)
+
+@-webkit-keyframes cssload-rotate-two
+  0%
+    -webkit-transform rotateX(50deg) rotateY(10deg) rotateZ(0)
+
+  100%
+    -webkit-transform rotateX(50deg) rotateY(10deg)    rotateZ(360deg)
+ 
+@keyframes cssload-rotate-three  
+  0%
+    -webkit-transform rotateX(35deg) rotateY(55deg) rotateZ(0)
+
+  100%
+    -webkit-transform rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+ 
+@-webkit-keyframes cssload-rotate-three
+  0%
+    -webkit-transform rotateX(35deg) rotateY(55deg) rotateZ(0)
+
+  100%
+    -webkit-transform rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+
+
+.thanks-block
+  padding-top 300px
+  text-align center
+
+  @media sm
+    padding-top 150px
+
+  p
+    margin-bottom 30px
+
+    @media sm
+      margin-bottom 20px
+
+  .btns
+    .btn
+      display inline-block
+      vertical-align top
+      margin 0 20px
+
+      @media sm
+        display block
+        margin 0 auto 20px

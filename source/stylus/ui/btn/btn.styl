@@ -1,0 +1,39 @@
+.btn
+  box-sizing  border-box
+  font-size 18px
+  color $cWhite
+  font-family $fFutura
+  text-align center
+  background linear-gradient(to bottom, rgba(59,176,211,1) 0%,rgba(31,147,193,1) 100%)
+  position relative
+  cursor pointer
+  transition linear .4s ease-in-out
+  border-radius 40px
+  padding 17px 30px 20px
+  outline none
+  display inline-block
+  border none
+  border-top 6px solid #44c0e8
+  border-bottom 6px solid #198bbf
+  text-shadow 0 -1px 0 #2d94c6
+  box-shadow 0 12px 21px rgba(65,157,204,0.6), inset 0 0 20px rgba(255,255,255,0.4)
+
+  &:hover
+    background linear-gradient(to bottom, rgba(59,176,211,1) - rgba(50,50,50,1) 0%,rgba(31,147,193,1) - rgba(50,50,50,1) 100%)
+
+  @media sm
+    font-size 14px
+    width 100%
+    display block
+    padding 12px 0 13px !important
+
+  &:after
+    position absolute
+    content ""
+    left 0
+    top 0
+    right 0
+    bottom 0
+    border-radius 40px
+    background url("../img/bg--noise.png") repeat
+    opacity 0.4
