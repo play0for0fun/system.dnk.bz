@@ -1,35 +1,49 @@
 <?php
+$form = $_POST['form'];
 $contacts = $_POST['contact'];
 
 $name = $contacts['first_name'];
 $phone = $contacts['general_phone'];
+$email = $contacts['email'];
 
-$summ = $_POST['summ'];
+$deal = $_POST['deal'];
+
+$sum = $deal['custom_24915'];
+$menegers = $deal['custom_24917'];
+$position = $deal['custom_24916'];
+$type = $deal['custom_24918'];
 
 $subject = 'Заявка system.dnk.bz';	
 
-//$headers= "From: noreply <noreply@noreply.ru>\r\n";
-//$headers.= "Reply-To: noreply <noreply@noreply.ru>\r\n";
 $headers= "X-Mailer: PHP/" . phpversion()."\r\n";
 $headers.= "MIME-Version: 1.0" . "\r\n";
 $headers.= "Content-type: text/plain; charset=utf-8\r\n";
 
-$to = "triowork2@gmail.com";
+$message = "Форма: $form\n";
+$message .= "Имя: $name\n";
+if(isset($phone)){
+	$message .= "Телефон: $phone\n";
+};
+if(isset($email)){
+	$message .= "E-mail: $email\n\n";
+};
 
-$message = "Имя: $name\n";
-$message .= "Телефон: $phone\n\n";
-if(isset($summ)){
-	$message .= "Сумма: $summ\n";
-}
+if(isset($email)){
+	$message .= "Годовой оборот компании: $sum\n";
+};
+if(isset($email)){
+	$message .= "Количество руководителей: $menegers\n";
+};
+if(isset($email)){
+	$message .= "Должность обратившегося: $position\n";
+};
+if(isset($email)){
+	$message .= "Формат программы: $type\n";
+};
 
+$to = "system@dnk.bz";
 mail($to,$subject,$message,$headers);
-
-
-$to = "about@bfstudio.pw";
-mail($to,$subject,$message,$headers);
-$to = "hangman@i.ua";
-mail($to,$subject,$message,$headers);
-$to = "bev-olga@yandex.ru";
+$to = "kolmakov.mikhail@gmail.com";
 mail($to,$subject,$message,$headers);
 
 echo 'true';

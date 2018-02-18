@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Выигрываем конкретную борьбу за счёт внедрения системной работы в компании и команды</title>
+    <title>Выигрываем конкретную борьбу за счёт внедрения системной работы в компании и команды></title>
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/app-common.js"></script>
     <script src="../js/app.js"></script>
@@ -16,9 +16,9 @@
       <header class="header">
         <div class="width-wrap justifyed">
           <div class="header--logo">
-            <div class="header--logo-img"></div>
+            <a href="../"><div class="header--logo-img"></div></a>
           </div><span class="header--btn">Пора навести порядок</span>
-          <div class="header--contacts"><a href="tel:88007074777" class="header--contacts-phone">8 800 707 47 77</a><a data-fancybox="modal-header" data-src="#call" href="javascript:;" class="header--contacts-call">Заказать звонок</a></div>
+          <div class="header--contacts"><a href="tel:88005511801" class="header--contacts-phone">8 800 551 18 01</a><a data-fancybox="modal-header" data-src="#call" href="javascript:;" class="header--contacts-call">Заказать звонок</a></div>
         </div>
       </header>
       <div class="hidden-block">
@@ -31,17 +31,19 @@
           <p class="fs18">Гражданин гарантирует: информация, им&nbsp;предоставленная, является полной, точной и&nbsp;достоверной; при предоставлении информации не&nbsp;нарушается действующее законодательство Российской Федерации, законные права и&nbsp;интересы третьих лиц; вся предоставленная информация заполнена Гражданина в&nbsp;отношении себя лично.</p>
         </div>
         <div id="call" class="popup">
-          <form action="https://app.salesap.ru/web_forms/order" method="post" class="main-form">
+          <form action="https://app.salesap.ru/web_forms/order" method="post" data-url="../js/ajax/send.php" class="main-form">
+            <input type="hidden" name="form" value="Заказ обратного звонка">
             <input type="hidden" name="source_id" value="69938">
-            <input type="hidden" name="redirect_url" value="http://system.dnk.bz/thank_you">
+            <input type="hidden" name="redirect_url" value="http://system.dnk.bz/thank_you/">
             <input type="hidden" name="token" value="36d15a24fc1958b1ede8380f191cd6aa">
             <input type="hidden" name="responsible_id" value="10134">
+            <input type="hidden" name="deal[name]" value="10134">
             <h2>Заказать обратный звонок</h2>
             <label class="label-input">
               <input type="text" name="contact[first_name]" placeholder="Имя" class="inp required"><span class="error"></span>
             </label>
             <label class="label-input">
-              <input type="text" name="contact[mobile_phone]" placeholder="Телефон" class="inp required inp-phone"><span class="error"></span>
+              <input type="text" name="contact[general_phone]" placeholder="Телефон" class="inp required inp-phone"><span class="error"></span>
             </label>
             <button type="submit" class="btn js--form-submit">Отправить</button>
           </form>

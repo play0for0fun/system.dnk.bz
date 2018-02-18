@@ -81,12 +81,14 @@ $(document).ready(function () {
     });
 
     function CheckInput(input) {
-        if (input.val() == '') {
+        var value = input.val();
+
+        if (value == '') {
             input.closest('label').removeClass('success').addClass('error').find('.error').text('Поле незаполнено');
         }
         else {
             if (input.hasClass('inp-mail')) {
-                if (validateEmail(inp.val()) == false) {
+                if (validateEmail(value) == false) {
                     input.closest('label').removeClass('success').addClass('error').find('.error').text('Неверный формат');
                 }
                 else {
@@ -95,7 +97,7 @@ $(document).ready(function () {
             }
             else {
                 if (input.hasClass('inp-phone')) {
-                    if ((input.val().toString().indexOf('_') + 1)) {
+                    if ((value.toString().indexOf('_') + 1)) {
                         input.closest('label').removeClass('success').addClass('error').find('.error').text('Неверный формат');
                     }
                 }
@@ -106,9 +108,7 @@ $(document).ready(function () {
         }
     }
 
-    
-    $('form').submit(function(e){
-
+    $('form').submit(function (e) {
         var $form = $(this);
 
         if (lots_of_stuff_already_done) {
@@ -118,25 +118,24 @@ $(document).ready(function () {
 
         e.preventDefault();
 
-        // do lots of stuff
-
         $form.find('.required').each(function () {
-            CheckInput($(this));
+            CheckInput($form);
         });
 
         if (!($form.find('label.error').length)) {
 
-        
-            $.ajax({type: $form.attr('method'), url: 'js/ajax/send.php', data: $form.serialize(),
-                complete : function(){
+            var data = $form.serialize();
+            $.ajax({
+                type: $form.attr('method'), url: $form.data('url'), data: $form.serialize(),
+                complete: function () {
 
                     lots_of_stuff_already_done = true; // set flag
                     $form.submit();
 
                 }
-            }); 
-          
-        };
+            });
+
+        }
     });
 
     // Отправка почты
