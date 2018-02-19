@@ -193,6 +193,7 @@ block content
                 input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you/')
                 input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
                 input(type="hidden" name='responsible_id' value='10134')
+                input(type="hidden" name='deal[stage_category]' value='9348')
 
                 .main-form--section
                     h4 Годовой оборот вашей компании
@@ -508,35 +509,7 @@ block content
         .free-bg
 
         .width-wrap
-            form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/ajax/send.php").main-form
-
-                input(type="hidden" name='form' value='Бесплатный вебинар')
-
-                input(type="hidden" name='source_id' value='69939')
-                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you/')
-                input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
-                input(type="hidden" name='responsible_id' value='10134')
-                input(type="hidden" name='deal[name]' value='10134')
-
-                h2 Бесплатный вебинар!
-
-                p.fbook Хотите получить больше информации из&nbsp;первых уст?
-                p.fbook Посетите бесплатный вебинар от&nbsp;Михаила и&nbsp;Ильи и&nbsp;узнайте, в&nbsp;чем главный ключ к&nbsp;построению системы в&nbsp;своем бизнесе!
-                    =" "
-                    i И&nbsp;получите шанс выиграть 100&nbsp;тыс. руб.&nbsp;на&nbsp;внедрение системной работы!
-
-                span.form-notification.fs16.fbook Дата ближайшего вебинара: 22.02.2018 20.00 по Мск.
-
-                .inputs
-                    label.label-input
-                        input(type="text" name="contact[first_name]" placeholder="Имя").inp.required
-                        span.error
-
-                    label.label-input
-                        input(type="text" name="contact[email]" placeholder="E-mail").inp.required.inp-mail
-                        span.error
-
-                button(type="submit").btn.js--form-submit Записаться на вебинарs
+            include forms/form-vebinar
 
     section.solution
         .solution-bg
@@ -673,6 +646,7 @@ block content
                 input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you/')
                 input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
                 input(type="hidden" name='responsible_id' value='10134')
+                input(type="hidden" name='deal[stage_category]' value='9348')
 
                 .main-form--section
                     h4 Годовой оборот вашей компании

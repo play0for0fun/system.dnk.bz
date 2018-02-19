@@ -37,7 +37,7 @@ if(isset($email)){
 if(isset($email)){
 	$message .= "Должность обратившегося: $position\n";
 };
-if(isset($email)){
+if(isset($type)){
 	$message .= "Формат программы: $type\n";
 };
 
