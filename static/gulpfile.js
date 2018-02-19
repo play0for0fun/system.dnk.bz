@@ -77,7 +77,7 @@ gulp.task('stylus', function() {
 });
 
 gulp.task('jade', function() {
-    gulp.src(['source/jade/*.jade'])
+    gulp.src(['source/jade/*/*.jade'])
         .pipe(changed('html', {extension: '.html'}))
         .pipe(gulpif(global.isWatching, cached('jade')))
         .pipe(jadeInheritance({basedir: 'source/jade'}))

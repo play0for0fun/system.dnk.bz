@@ -5,32 +5,7 @@ extends partials/layout
 
 block content
     .hidden-block
-        div(id="form-ok").popup.popup-text
-            h2 Спасибо!
-
-            p.fs18 Мы&nbsp;приняли ваше обращение! Обращений очень много, но&nbsp;мы&nbsp;берем не&nbsp;более 4х&nbsp;клиентов в&nbsp;месяц. Если вы&nbsp;хотите ускорить процесс построения системы в&nbsp;вашей компании, заполните опросную форму и&nbsp;мы&nbsp;свяжемся с&nbsp;вами намного быстрее!
-
-            a(href="https://docs.google.com/forms/d/e/1FAIpQLSdO691uYBAZCITuSMcr37EMwV7EX4c4jjE9zmyvdZ9nN8WvNQ/viewform" target="_blank").btn Заполнить опросную форму
-
-        div(id="call").popup
-            form(action="https://app.salesap.ru/web_forms/order" method="post").main-form
-
-                input(type="hidden" name='source_id' value='69938')
-                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you')
-                input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
-                input(type="hidden" name='responsible_id' value='10134')
-
-                h2 Заказать обратный звонок
-
-                label.label-input
-                    input(type="text" name="contact[first_name]" placeholder="Имя").inp.required
-                    span.error
-
-                label.label-input
-                    input(type="text" name="contact[mobile_phone]" placeholder="Телефон").inp.required.inp-phone
-                    span.error
-
-                button(type="submit").btn.js--form-submit Отправить
+        include forms/form-call
 
         div(id="policy").popup.popup-text.policy
             h3 Политика конфиденциальности
@@ -210,10 +185,12 @@ block content
                 =" "
                 i можем помочь
 
-            form(action="https://app.salesap.ru/web_forms/order" method="post").main-form
+            form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/ajax/send.php").main-form
+
+                input(type="hidden" name='form' value='Большая форма1')
 
                 input(type="hidden" name='source_id' value='69904')
-                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you')
+                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you/')
                 input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
                 input(type="hidden" name='responsible_id' value='10134')
 
@@ -268,7 +245,7 @@ block content
                             span.error
 
                         label.label-input
-                            input(type="text" name="contact[mobile_phone]" placeholder="Телефон").inp.required.inp-phone
+                            input(type="text" name="contact[general_phone]" placeholder="Телефон").inp.required.inp-phone
                             span.error
 
                         label.label-input
@@ -531,12 +508,15 @@ block content
         .free-bg
 
         .width-wrap
-            form(action="https://app.salesap.ru/web_forms/order" method="post").main-form
+            form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/ajax/send.php").main-form
+
+                input(type="hidden" name='form' value='Бесплатный вебинар')
 
                 input(type="hidden" name='source_id' value='69939')
-                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you')
+                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you/')
                 input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
                 input(type="hidden" name='responsible_id' value='10134')
+                input(type="hidden" name='deal[name]' value='10134')
 
                 h2 Бесплатный вебинар!
 
@@ -685,10 +665,12 @@ block content
 
                 i.small.fs18.fbook * Если вы в другом городе ­ мы проводим выездные мероприятия
 
-            form(action="https://app.salesap.ru/web_forms/order" method="post").main-form
+            form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/ajax/send.php").main-form
 
-                input(type="hidden" name='source_id' value='69937')
-                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you')
+                input(type="hidden" name='form' value='Большая форма 2')
+
+                input(type="hidden" name='source_id' value='69904')
+                input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you/')
                 input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
                 input(type="hidden" name='responsible_id' value='10134')
 
@@ -753,7 +735,7 @@ block content
                             span.error
 
                         label.label-input
-                            input(type="text" name="contact[mobile_phone]" placeholder="Телефон").inp.required.inp-phone
+                            input(type="text" name="contact[general_phone]" placeholder="Телефон").inp.required.inp-phone
                             span.error
 
                         label.label-input
