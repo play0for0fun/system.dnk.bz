@@ -460,6 +460,11 @@ h4 {
           transform: translate3d(-5px, -4px, 0);
   bottom: 11px;
 }
+@media (max-width: 760px) {
+  .main-form label.label-radio input:checked + .psevdoradio:after {
+    background: url("../img/sprite-mobile.png") no-repeat -748px -4710px;
+  }
+}
 .main-form .justifyed {
   margin-bottom: 50px;
 }
@@ -507,6 +512,11 @@ h4 {
   right: 0;
   bottom: 11px;
 }
+@media (max-width: 760px) {
+  .main-form label.label-input.success:after {
+    background: url("../img/sprite-mobile.png") no-repeat -748px -4702px;
+  }
+}
 .main-form label.label-input.success .inp {
   border-bottom: 1px solid #d8dae6;
 }
@@ -521,6 +531,11 @@ h4 {
   height: 8px;
   right: 0;
   bottom: 7px;
+}
+@media (max-width: 760px) {
+  .main-form label.label-input.error:after {
+    background: url("../img/sprite-mobile.png") no-repeat -734px -4717px;
+  }
 }
 .main-form label.label-input.error .inp {
   border-bottom: 1px solid #ef094a;
@@ -2211,12 +2226,12 @@ footer.footer a:hover {
 }
 @media (max-width: 760px) {
   .chaos-percent-img:before {
-    zoom: 1;
+    zoom: 0.9;
     width: 336px;
     height: 692px;
     left: 50%;
     top: -632px;
-    margin-left: -190px;
+    margin-left: -199px;
     background: url("../img/sprite-mobile.png") no-repeat 0 0;
     background-position: 0px -5922px;
   }

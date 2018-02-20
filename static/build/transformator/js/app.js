@@ -3,6 +3,8 @@
  * @version v0.1.0
  * @author bev-olga@yandex.ru
  */
+var lots_of_stuff_already_done = false;
+
 $(document).ready(function () {
     var BODY = $('body');
     var WINDOW = $(window);
@@ -79,12 +81,14 @@ $(document).ready(function () {
     });
 
     function CheckInput(input) {
-        if (input.val() == '') {
+        var value = input.val();
+
+        if (value == '') {
             input.closest('label').removeClass('success').addClass('error').find('.error').text('Поле незаполнено');
         }
         else {
             if (input.hasClass('inp-mail')) {
-                if (validateEmail(inp.val()) == false) {
+                if (validateEmail(value) == false) {
                     input.closest('label').removeClass('success').addClass('error').find('.error').text('Неверный формат');
                 }
                 else {
@@ -93,7 +97,7 @@ $(document).ready(function () {
             }
             else {
                 if (input.hasClass('inp-phone')) {
-                    if ((input.val().toString().indexOf('_') + 1)) {
+                    if ((value.toString().indexOf('_') + 1)) {
                         input.closest('label').removeClass('success').addClass('error').find('.error').text('Неверный формат');
                     }
                 }
@@ -104,44 +108,71 @@ $(document).ready(function () {
         }
     }
 
-    // Отправка почты
-    $('.js--form-submit').on('click', function () {
-        console.log('click');
-        var form = $(this).closest('form');
-        var url = form.attr('action');
-        var method = form.attr('method');
-        var btn = $(this);
-        var text = btn.text();
-        btn.text('Отправляем');
+    $('form').submit(function (e) {
+        var $form = $(this);
 
-        form.find('.required').each(function () {
-            CheckInput($(this));
-        });
-
-        console.log(form.find('label.error').length)
-
-        if (!(form.find('label.error').length)) {
-            console.log('send')
-            $.ajax({
-                type: method,
-                url: url,
-                data: form.serialize(),
-                success: function (data) {
-                    form.find('.js--form-sended').trigger('click');
-                    console.log('succes')
-                },
-                error: function (data) {
-                    text = btn.text('Ошибка при отправке');
-
-                    setTimeout(function () {
-                        text = btn.text(text);
-                    }, 2000)
-                }
-            });
+        if (lots_of_stuff_already_done) {
+            lots_of_stuff_already_done = false; // reset flag
+            return; // let the event bubble away
         }
 
-        return false;
+        e.preventDefault();
+
+        $form.find('.required').each(function () {
+            CheckInput($form);
+        });
+
+        if (!($form.find('label.error').length)) {
+
+            var data = $form.serialize();
+            $.ajax({
+                type: $form.attr('method'), url: $form.data('url'), data: $form.serialize(),
+                complete: function () {
+
+                    lots_of_stuff_already_done = true; // set flag
+                    $form.submit();
+
+                }
+            });
+
+        }
     });
+
+    // Отправка почты
+    // $('.js--form-submit').on('click', function () {
+    //     var form = $(this).closest('form');
+    //     var url = form.attr('action');
+    //     var method = form.attr('method');
+    //     var btn = $(this);
+    //     var text = btn.text();
+    //     btn.text('Отправляем');
+
+    //     form.find('.required').each(function () {
+    //         CheckInput($(this));
+    //     });
+
+    //     if (!(form.find('label.error').length)) {
+
+    //         form.trigger('submit');
+    //         //$.ajax({
+    //         //    type: method,
+    //         //    url: url,
+    //         //    data: form.serialize(),
+    //         //    success: function (data) {
+    //         //        console.log('succes')
+    //         //    },
+    //         //    error: function (data) {
+    //         //        text = btn.text('Ошибка при отправке');
+    //         //
+    //         //        setTimeout(function () {
+    //         //            text = btn.text(text);
+    //         //        }, 2000)
+    //         //    }
+    //         //});
+    //     }
+
+    //     return false;
+    // });
 
     $('.js--shos-more').on('click', function () {
         $(this).fadeOut(0).prev('.hidden-content').fadeIn(0);
