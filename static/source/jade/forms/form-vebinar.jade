@@ -16,7 +16,7 @@ form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/
 
     span.form-notification.fs16.fbook Дата ближайшего вебинара: 22.02.2018 20.00 по Мск.
 
-    .inputs
+    .inputs.justifyed
         label.label-input
             input(type="text" name="contact[first_name]" placeholder="Имя").inp.required
             span.error
@@ -24,5 +24,17 @@ form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/
         label.label-input
             input(type="text" name="contact[email]" placeholder="E-mail").inp.required.inp-mail
             span.error
+
+        label.label-input
+            input(type="text" name="contact[general_phone]" placeholder="Телефон").inp.required.inp-phone
+            span.error
+
+    .justifyed
+        label.label-radio-text.one-half
+            input(type="radio" name="deal[custom_25071]" value="У меня есть бизнес")
+            span у меня есть бизнес
+        label.label-radio-text.one-half
+            input(type="radio" name="deal[custom_25071]" value="Я в начале пути")
+            span я в начале пути
 
     button(type="submit").btn.js--form-submit Записаться на вебинар

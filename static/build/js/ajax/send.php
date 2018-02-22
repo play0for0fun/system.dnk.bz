@@ -12,6 +12,7 @@ $sum = $deal['custom_24915'];
 $menegers = $deal['custom_24917'];
 $position = $deal['custom_24916'];
 $type = $deal['custom_24918'];
+$expirience = $deal['custom_25071'];
 
 $subject = 'Заявка system.dnk.bz';	
 
@@ -39,6 +40,9 @@ if(isset($email)){
 };
 if(isset($type)){
 	$message .= "Формат программы: $type\n";
+};
+if(isset($expirience)){
+	$message .= "Опыт в бизнесе: $expirience\n";
 };
 
 $to = "system@dnk.bz";
