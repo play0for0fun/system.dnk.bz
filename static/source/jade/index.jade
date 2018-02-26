@@ -260,6 +260,17 @@ block content
 
                     button(type="submit").btn.js--form-submit Получить аудит от DNK Системы
 
+                    label.checkbox
+                        input(type="checkbox" name="personal" checked=).js--required-check
+                        p Я&nbsp;даю
+                            a(data-src="forms/privacy.html" data-fancybox="privacy1" data-type="ajax" href="javascript:;") согласие на&nbsp;обработку персональных данных
+
+                    label.checkbox
+                        input(type="checkbox" name="policy" checked=).js--required-check
+                        p Я&nbsp;принимаю
+                            a(data-src="forms/terms.html" data-fancybox="terms1" data-type="ajax" href="javascript:;") польовательское соглашение
+
+
     section.podium
         .width-wrap
             .justifyed.podium-percent
@@ -436,8 +447,8 @@ block content
             ul.result-list.justifyed
                 li.fs18 По&nbsp;всем направлениям сформулированы точные измеряемые цели
                 li.fs18 Электронную систему контроля сотрудников и&nbsp;их&nbsp;эффективности
-                li.fs18 У&nbsp;каждой задачи есть отвественный, статус и&nbsp;срок
                 li.fs18 Снижение затрат на&nbsp;выполнение отдельного проекта
+                li.fs18 У&nbsp;каждой задачи есть отвественный, статус и&nbsp;срок
                 li.fs18 Возможность корректировать работу, не&nbsp;причиняя вреда
                 li.fs18 Ритм ежедневной эффективной системной работы
 
@@ -722,6 +733,17 @@ block content
 
                     button(type="submit").btn.js--form-submit Получить аудит от DNK Системы
 
+                    label.checkbox
+                        input(type="checkbox" name="personal" checked=).js--required-check
+                        p Я&nbsp;даю
+                            a(data-src="forms/privacy.html" data-fancybox="privacy2" data-type="ajax" href="javascript:;") согласие на&nbsp;обработку персональных данных
+
+                    label.checkbox
+                        input(type="checkbox" name="policy" checked=).js--required-check
+                        p Я&nbsp;принимаю
+                            a(data-src="forms/terms.html" data-fancybox="terms2" data-type="ajax" href="javascript:;") польовательское соглашение
+
+
     footer.footer
         .width-wrap.justifyed
             a(href="mailto:system@dnk.bz").footer-mail.fs16.fbook system@dnk.bz
@@ -729,3 +751,5 @@ block content
             a(data-fancybox="modal-policy" data-src="#policy" href="javascript:;").fs16.fbook Политика конфиденциальности
 
             span.fs16.fbook Разработано club.dnk.bz
+
+    include partials/mertika

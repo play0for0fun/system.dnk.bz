@@ -172,5 +172,25 @@ $(document).ready(function () {
     $('.js--shos-more').on('click', function () {
         $(this).fadeOut(0).prev('.hidden-content').fadeIn(0);
         return false;
+    });
+
+    $('.js--required-check').on('click', function(){
+        var check = $(this);
+        var form = check.closest('form');
+
+        if(check.is(':checked')){
+            var error = false;
+            form.find('.js--required-check').each(function(){
+                if(!$(this).is(':checked')){
+                    error = true;
+                }
+            });
+            if(error == false){
+                form.find('.btn.js--form-submit').removeClass('disabled');
+            }
+        }
+        else{
+            form.find('.btn.js--form-submit').addClass('disabled');
+        }
     })
 });

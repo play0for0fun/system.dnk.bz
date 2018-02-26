@@ -5,7 +5,7 @@ form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/
     input(type="hidden" name='redirect_url' value='http://system.dnk.bz/thank_you/')
     input(type="hidden" name='token' value='36d15a24fc1958b1ede8380f191cd6aa')
     input(type="hidden" name='responsible_id' value='10134')
-    input(type="hidden" name='deal[stage_category]' value='9348')
+    input(type="hidden" name='deal[stage_category]' value='9571')
 
     h2 Бесплатный вебинар!
 
@@ -14,7 +14,7 @@ form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/
         =" "
         i И&nbsp;получите шанс выиграть 100&nbsp;тыс. руб.&nbsp;на&nbsp;внедрение системной работы!
 
-    span.form-notification.fs16.fbook Дата ближайшего вебинара: 22.02.2018 20.00 по Мск.
+    span.form-notification.fs16.fbook Дата ближайшего вебинара: 13.03.2018 20.00 по Мск.
 
     .inputs.justifyed
         label.label-input
@@ -22,19 +22,29 @@ form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/
             span.error
 
         label.label-input
-            input(type="text" name="contact[email]" placeholder="E-mail").inp.required.inp-mail
+            input(type="text" name="contact[general_phone]" placeholder="Телефон").inp.required.inp-phone
             span.error
 
         label.label-input
-            input(type="text" name="contact[general_phone]" placeholder="Телефон").inp.required.inp-phone
+            input(type="text" name="contact[email]" placeholder="E-mail").inp.required.inp-mail
             span.error
 
     .justifyed
         label.label-radio-text.one-half
-            input(type="radio" name="deal[custom_25071]" value="У меня есть бизнес")
+            input(type="radio" name="deal[custom_25117]" value="Да")
             span у меня есть бизнес
         label.label-radio-text.one-half
-            input(type="radio" name="deal[custom_25071]" value="Я в начале пути")
+            input(type="radio" name="deal[custom_25117]" value="Нет")
             span я в начале пути
 
     button(type="submit").btn.js--form-submit Записаться на вебинар
+
+    label.checkbox
+        input(type="checkbox" name="personal" checked=).js--required-check
+        p Я&nbsp;даю
+            a(data-src="forms/privacy.html" data-fancybox="privacy" data-type="ajax" href="javascript:;") согласие на&nbsp;обработку персональных данных
+
+    label.checkbox
+        input(type="checkbox" name="policy" checked=).js--required-check
+        p Я&nbsp;принимаю
+            a(data-src="forms/terms.html" data-fancybox="terms" data-type="ajax" href="javascript:;") польовательское соглашение

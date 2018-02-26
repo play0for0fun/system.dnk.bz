@@ -4,12 +4,18 @@
   max-height 80vh
   overflow-y scroll
 
+  @media hght
+    padding 30px
+
   @media sm
     width 280px
     padding 15px
 
   .main-form
     width 100%
+
+    @media hght
+      padding 30px
 
     @media sm
       padding-top 0
@@ -29,6 +35,29 @@
 
   &.free
     padding 0
+
+    .main-form
+      width 100%
+
+      @media hght
+        padding 30px
+
+      h2
+        @media hght
+          margin-bottom 10px
+
+      p
+        @media hght
+          margin-bottom 15px
+          font-size 20px
+
+      span.form-notification
+        @media hght
+          margin-bottom 10px
+
+      .inputs
+        @media hght
+          margin-bottom 30px
 
   &.popup-text
     text-align center
@@ -54,6 +83,49 @@
       a
         font-family $fFutura_m
         text-decoration underline
+        color $cBlue
+
+  &.popup-terms
+    *
+      color #0c1752
+
+    h2
+      margin-bottom 20px
+
+    h3
+      text-align left
+      font-size 24px
+      margin-bottom 20px
+
+    p
+      margin-bottom 20px
+      font-size 20px
+      line-height 24px
+
+    a
+      font inherit
+      font-family $fFutura_m
+      text-decoration underline
+      color $cBlue
+
+    ul
+      padding-left 20px
+      margin-bottom 20px
+
+      li
+        display list-item
+        list-style disc
+        font-size 20px
+        line-height 24px
+    ol
+      padding-left 20px
+      margin-bottom 20px
+
+      li
+        display list-item
+        list-style decimal
+        font-size 20px
+        line-height 24px
 
   &.policy
     text-align left

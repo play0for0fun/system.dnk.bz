@@ -23,6 +23,37 @@
       margin-bottom 16px
       line-height 22px
 
+  .checkbox
+    display block
+    padding-left 25px
+    margin 0 25px 10px
+    text-align left
+
+    @media md
+      margin 0 auto 10px
+
+    input
+      display inline-block
+      vertical-align top
+      margin-left -25px
+      margin-right 10px
+      margin-top 9px
+
+    p
+      display inline-block !important
+      vertical-align top
+      text-align left !important
+      font-size 16px !important
+      margin-bottom 0 !important
+      width 95%
+      color #0c1752 !important
+
+      a
+        color inherit
+        font inherit
+        border-bottom 1px solid
+        margin-left 5px
+
   label.label-radio-text
     display inline-block
     vertical-align top
@@ -224,6 +255,12 @@
       &:focus::placeholder
         color transparent
 
+  .btn
+    margin-bottom 30px
+
+    &:last-child
+      margin-bottom 0
+
 .decor-shadow
     display block
     width 60%
@@ -232,3 +269,6 @@
     box-shadow 0 19px 41px rgba(187,197,202,0.97)
     border-radius 30px
     margin -12px auto 42px
+
+
+
