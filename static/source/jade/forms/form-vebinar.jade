@@ -16,6 +16,14 @@ form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/
 
     span.form-notification.fs16.fbook Дата ближайшего вебинара: 13.03.2018 20.00 по Мск.
 
+    .justifyed
+        label.label-radio-text.one-half
+            input(type="radio" name="deal[custom_25117]" value="Да")
+            span у меня есть бизнес
+        label.label-radio-text.one-half
+            input(type="radio" name="deal[custom_25117]" value="Нет")
+            span я в начале пути
+
     .inputs.justifyed
         label.label-input
             input(type="text" name="contact[first_name]" placeholder="Имя").inp.required
@@ -28,14 +36,6 @@ form(action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/
         label.label-input
             input(type="text" name="contact[email]" placeholder="E-mail").inp.required.inp-mail
             span.error
-
-    .justifyed
-        label.label-radio-text.one-half
-            input(type="radio" name="deal[custom_25117]" value="Да")
-            span у меня есть бизнес
-        label.label-radio-text.one-half
-            input(type="radio" name="deal[custom_25117]" value="Нет")
-            span я в начале пути
 
     button(type="submit").btn.js--form-submit Записаться на вебинар
 
