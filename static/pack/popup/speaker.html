@@ -1,0 +1,39 @@
+
+<div id="call" class="popup popup-speaker">
+  <div class="popup-speaker--data">
+    <div class="justifyed"><img src="img/pintosevitch.jpg" alt="alt"/>
+      <h3>ИЦХАК<i>ПИНТОСЕВИЧ</i></h3>
+    </div>
+  </div>
+  <div class="justifyed">
+    <div class="popup-speaker--info">
+      <ul>
+        <li>Автор бестселлера &laquo;Действуй! 10&nbsp;Заповедей Успеха&raquo; и&nbsp;еще 12&nbsp;книг совокупным тиражом более 300000 экземпляров</li>
+        <li>Среди его клиентов&nbsp;&mdash; Procter&amp;Gamble и&nbsp;Master Card, а&nbsp;также политики и&nbsp;звезды шоу-бизнеса</li>
+        <li>Автор уникальных тренинговых программ, которые посетили более 64&nbsp;000 человек из&nbsp;27&nbsp;стран мира</li>
+      </ul>
+    </div>
+    <form action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/ajax/send.php" class="main-form">
+      <input type="hidden" name="form" value="Заказ обратного звонка"/>
+      <h4>Регистрация на форум</h4>
+      <input type="text" name="contact[first_name]" placeholder="Имя" class="inp required"/>
+      <input type="text" name="contact[general_phone]" placeholder="Телефон" class="inp required inp-phone"/>
+      <input type="text" name="" placeholder="222@312.eu" class="inp inp-mail required"/>
+      <button type="submit" class="btn js--form-submit">Отправить</button>
+      <div class="checboxes">
+        <label class="checkbox">
+          <input type="checkbox" checked="checked" name="tarif" value="" class="js--check-personal"/>
+          <div class="pdevdocheckbox"></div>
+          <p>Нажимая на&nbsp;кнопку &laquo;Отпарвить&raquo;, я&nbsp;даю согласие <a data-src="popup/privacy.html" data-fancybox="privace1" data-type="ajax">на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с&nbsp;условиями договора-оферты, лицензионного договора и&nbsp;политикой конфиденциальности</a>
+          </p>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" checked="checked" name="tarif" value=""/>
+          <div class="pdevdocheckbox"></div>
+          <p>Нажимая на&nbsp;кнопку &laquo;Отпарвить&raquo;, я&nbsp;даю согласие на&nbsp;получение рекламной информации от&nbsp;школы бизнеса &laquo;Синергия&raquo;</p>
+        </label>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript">$(function(){$('.inp-phone').mask('+7 (999) 999-99-99', {});});</script>
+</div>

@@ -1,0 +1,11 @@
+
+<div id="call" class="popup color-section grad7">
+  <form action="https://app.salesap.ru/web_forms/order" method="post" data-url="js/ajax/send.php" class="main-form">
+    <input type="hidden" name="form" value="Заказ обратного звонка"/>
+    <h4>Заказать обратный звонок</h4>
+    <input type="text" name="contact[first_name]" placeholder="Имя" class="inp required"/>
+    <input type="text" name="contact[general_phone]" placeholder="Телефон" class="inp required inp-phone"/>
+    <button type="submit" class="btn js--form-submit">Отправить</button>
+  </form>
+  <script type="text/javascript">$(function(){$('.inp-phone').mask('+7 (999) 999-99-99', {});});</script>
+</div>
